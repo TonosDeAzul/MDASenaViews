@@ -21,23 +21,25 @@
 
   <!-- Ingrese aquí la estrucuta de la página -->
   <main class="w-full h-full">
-    <section class="w-full h-full">
-      <article class="w-full h-full flex flex-col max-w-sm">
-        <div>
-          <h1>
+    <section class="w-full h-full flex justify-center items-center">
+      <article class="w-full flex justify-center items-center flex-col bg-mdaWhite max-w-lg max-h-min gap-2 rounded-xl p-8">
+        <div class="flex flex-col justify-center text-white">
+          <h1 class="text-black text-2xl font-bold text-center">
             Autenticación de cuenta
           </h1>
-          <p>
+        </div>
+        <div>
+          <p class="max-w-72 text-center flex justify-center">
             Ingrese el código de verificación enviado al correo registrado
           </p>
         </div>
-        <div>
-          <form action="">
-            <label class="input input-bordered flex items-center gap-2">
+        <div class="w-10/12">
+          <form action="" class="w-full flex flex-col gap-4">
+            <label class="input input-bordered flex items-center gap-2 w-full flex gap-4 bg-mdaWhite">
               <i class="fa-solid fa-unlock-keyhole"></i>
               <input type="text" class="grow" placeholder="Código de verificación" />
             </label>
-            <button type="submit">
+            <button type="submit" class="bg-mdaGreen p-2 rounded-xl text-white">
               Verificar
             </button>
           </form>
