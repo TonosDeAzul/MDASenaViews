@@ -17,36 +17,26 @@
   <title>MDA Sena - Inicio</title>
 </head>
 
-<body class="w-screen h-screen">
+<body class="bg-mdaWhite grid content-center justify-center min-h-screen w-full p-2.5">
 
   <!-- Ingrese aquí la estrucuta de la página -->
-  <main class="w-full h-full">
-    <section class="w-full h-full flex justify-center items-center">
-      <article class="w-full flex justify-center items-center flex-col bg-mdaWhite max-w-lg max-h-min gap-2 rounded-xl p-8">
-        <div class="flex flex-col justify-center text-white">
-          <h1 class="text-black text-2xl font-bold text-center">
-            Autenticación de cuenta
-          </h1>
-        </div>
-        <div>
-          <p class="max-w-72 text-center flex justify-center">
-            Ingrese el código de verificación enviado al correo registrado
-          </p>
-        </div>
-        <div class="w-10/12">
-          <form action="" class="w-full flex flex-col gap-4">
-            <label class="input input-bordered flex items-center gap-2 w-full flex gap-4 bg-mdaWhite">
-              <i class="fa-solid fa-unlock-keyhole"></i>
-              <input type="text" class="grow" placeholder="Código de verificación" />
-            </label>
-            <button type="submit" class="bg-mdaGreen p-2 rounded-xl text-white">
-              Verificar
-            </button>
-          </form>
-        </div>
-      </article>
-    </section>
-  </main>
+  <section class="grid bg-white p-7 rounded-lg shadow-md w-full">
+    <h3 class="text-mdaBlack text-xl text-center mb-1.5">
+      Autenticación de cuenta
+    </h3>
+    <p class="text-center flex justify-center mb-2.5">
+      Ingrese el código de verificación <br> enviado al correo registrado
+    </p>
+    <form action="" class="grid">
+      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
+        <i class="fa-solid fa-unlock-keyhole text-gray-400"></i>
+        <input type="text" class="grow text-mdaBlack" placeholder="Correo institucional" />
+      </label>
+      <button type="submit" class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
+        Verificar
+      </button>
+    </form>
+  </section>
   <!-- Enlace para manejo del DOM -->
   <script src="../scripts/script.js"></script>
 
