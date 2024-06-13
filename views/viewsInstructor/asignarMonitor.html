@@ -116,6 +116,46 @@
         </div>
       </div>
     </nav>
+
+    <!-- Modal agregar monitor -->
+    <section
+      id="modal-1"
+      class="hidden absolute min-h-screen w-full bg-mdaBlack_400"
+    >
+      <div class="w-96 bg-mdaWhite content-center p-5 justify-center">
+        <div>
+          Agregar monitor
+          <button
+            id="closeModal"
+            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+          >
+            ✕
+          </button>
+        </div>
+        <form action="">
+          <label class="input input-bordered flex items-center gap-2 bg-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="w-4 h-4 opacity-70"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <input
+              type="text"
+              class="grow text-mdaBlack"
+              placeholder="Search"
+            />
+          </label>
+        </form>
+      </div>
+    </section>
+
     <!-- Contenedor para los artículos -->
     <section
       class="m-auto flex w-full max-w-screen-2xl min-h-screen justify-center p-5 gap-5 flex-wrap content-center"
@@ -127,11 +167,12 @@
         <!-- Agregar monitor -->
         <div class="flex w-full justify-between">
           <h3 class="text-mdaBlack text-xl">Administrar monitores</h3>
-          <a
-            href="#"
+          <button
+            id="showModal"
             class="btn bg-mdaGreen border-none text-white hover:bg-mdaGreen"
-            >Agregar monitor</a
           >
+            Agregar monitor
+          </button>
         </div>
         <!-- Buscar monitor -->
         <form action="">
@@ -179,11 +220,11 @@
       </article>
     </section>
     <!-- Indicador de rol -->
-    <button
+    <!-- <button
       class="bg-white btn btn-sm border-none text-mdaBlack absolute top-0 right-0 m-2.5 hover:bg-white"
     >
       <i class="fa-solid fa-user"></i>Instructor
-    </button>
+    </button> -->
 
     <!-- Enlace para manejo del DOM -->
     <script src="../../scripts/script.js"></script>
