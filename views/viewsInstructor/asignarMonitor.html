@@ -120,14 +120,14 @@
     <!-- Modal agregar monitor -->
     <section
       id="modal-1"
-      class="hidden absolute min-h-screen w-full bg-mdaBlack_400"
+      class="hidden fixed m-auto flex w-full min-h-screen justify-center p-5 gap-5 flex-wrap content-center bg-mdaBlack_400 z-10"
     >
-      <div class="w-96 bg-mdaWhite content-center p-5 justify-center">
-        <div>
-          Agregar monitor
+      <article class="bg-white w-full max-w-2xl shadow-md rounded-lg p-5 flex flex-col justify-between gap-5">
+        <div class="flex w-full justify-between">
+          <h3 class="text-mdaBlack text-xl">Agregar monitor</h3>
           <button
             id="closeModal"
-            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            class="btn btn-sm btn-circle btn-ghost text-mdaBlack"
           >
             ✕
           </button>
@@ -152,8 +152,9 @@
               placeholder="Search"
             />
           </label>
+          <button class="btn bg-mdaGreen border-none text-white hover:bg-mdaGreen w-full mt-4">Agregar</button>
         </form>
-      </div>
+      </article>
     </section>
 
     <!-- Contenedor para los artículos -->
