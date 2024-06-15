@@ -30,7 +30,7 @@
     <!-- Ingrese aquí la estrucuta de la página -->
 
     <!-- Barra lateral izquierda -->
-    <nav class="bg-white p-7 shadow-md sticky top-0 h-screen">
+    <nav class="bg-white p-7 shadow-md sticky top-0 h-screen z-10">
       <div class="grid gap-y-5">
         <!-- Logo Sena y nombre del proyecto -->
         <div class="flex flex-row w-full h-32">
@@ -89,6 +89,7 @@
               Inicio
             </button>
           </a>
+          <!-- Asignar monitor -->
           <a href="asignarMonitor.html">
             <button
               class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start"
@@ -99,6 +100,7 @@
           </a>
           <a href="#">
             <button
+              id="showModal-2"
               class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start"
             >
               <i class="fa-solid fa-bell"></i>
@@ -115,7 +117,37 @@
           </a>
         </div>
       </div>
+      <!-- Barra notificaciones -->
+      <nav
+        id="modal-2"
+        class="hidden bg-white p-7 shadow-md absolute top-0 left-full h-screen w-full"
+      >
+        <div class="grid gap-y-5">
+          <button
+            id="closeModal-2"
+            class="btn btn-sm btn-circle btn-ghost text-mdaGreen"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <!-- HR -->
+          <div class="flex flex-col w-full">
+            <div class="divider m-0 h-0"></div>
+          </div>
+          <div>
+            <p class="text-mdaBlack text-sm">
+              Daniel Acetaminofén, ha cargado una evidencia
+            </p>
+            <button
+              class="btn btn-sm bg-mdaGreen border-none text-white mt-2 hover:bg-mdaGreen w-full"
+            >
+              Ver evidencia
+            </button>
+          </div>
+        </div>
+      </nav>
     </nav>
+
+    <div id="modal-2__background" class="hidden bg-mdaBlack_400 w-full min-h-screen absolute"></div>
 
     <!-- Modal agregar monitor -->
     <section
