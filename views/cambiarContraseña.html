@@ -1,56 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enlace para estilos personalizados -->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <!-- Enlace con la librería Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlace para personalización de colores en Tailwind -->
+    <script src="../scripts/tailwind.js"></script>
+    <!-- Enlace con la libería DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>MDA Sena - Restablecimiento de contraseña</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Enlace para estilos personalizados -->
-  <link rel="stylesheet" href="../styles/style.css">
-  <!-- Enlace con la librería Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Enlace para personalización de colores en Tailwind -->
-  <script src="../scripts/tailwind.js"></script>
-  <!-- Enlace con la libería DaisyUI -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <title>MDA Sena - Restablecimiento de contraseña</title>
-</head>
+  <body
+    class="bg-mdaWhite grid content-center justify-center min-h-screen w-full p-2.5 bg-background3 bg-cover"
+  >
+    <!-- Filtro imagen -->
+    <div
+      class="absolute top-0 left-0 min-h-screen w-full bg-mdaBlack_600"
+    ></div>
 
-<body class="bg-mdaWhite grid content-center justify-center min-h-screen w-full p-2.5">
-  <!-- Ingrese aquí la estrucuta de la página -->
-
-  <!-- Contenedor de login -->
-  <section class="container grid bg-white p-7 rounded-lg shadow-md w-full md:w-96">
-    <!--  -->
-    <h3 class="text-mdaBlack text-xl text-center mb-2.5">
-      Establece una nueva contraseña
-    </h3>
-    <p class="text-center flex justify-center mb-2.5">
-      Cambie su contraseña
-    </p>
-    <form action="login.html" class="grid">
-      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70">
-          <path fill-rule="evenodd"
-            d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
-            clip-rule="evenodd" />
-        </svg>
-        <input type="password" class="grow text-mdaBlack" placeholder="Contraseña nueva" autocomplete="off" />
-      </label>
-      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70">
-          <path fill-rule="evenodd"
-            d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
-            clip-rule="evenodd" />
-        </svg>
-        <input type="password" class="grow text-mdaBlack" placeholder="Confirmar contraseña" />
-      </label>
-      <button class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
-        Cambiar contraseña
-      </button>
-    </form>
-  </section>
-  <!-- Enlace para manejo del DOM -->
-  <script src="../scripts/script.js"></script>
-</body>
-
+    <!-- Ingrese aquí la estrucuta de la página -->
+    <section
+      class="container grid bg-white p-7 rounded-lg shadow-md w-full md:w-96 z-10"
+    >
+      <!--  -->
+      <h3 class="text-mdaBlack text-xl text-center mb-2.5">
+        Establece una nueva contraseña
+      </h3>
+      <p class="text-center flex justify-center mb-2.5">Cambie su contraseña</p>
+      <form action="login.html" class="grid">
+        <label
+          class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="w-4 h-4 opacity-70"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <input
+            type="password"
+            class="grow text-mdaBlack"
+            placeholder="Contraseña nueva"
+            autocomplete="off"
+          />
+        </label>
+        <label
+          class="bg-white text-mdaBlack input input-bordered flex items-center gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="w-4 h-4 opacity-70"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <input
+            type="password"
+            class="grow text-mdaBlack"
+            placeholder="Confirmar contraseña"
+          />
+        </label>
+        <button
+          class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen"
+        >
+          Cambiar contraseña
+        </button>
+      </form>
+    </section>
+    <!-- Enlace para manejo del DOM -->
+    <script src="../scripts/script.js"></script>
+  </body>
 </html>
