@@ -9,6 +9,7 @@ tailwind.config = {
         mdaGreen_400: "#39A90040",
         mdaBlack_400: "#1D1D1D40",
         mdaBlack_600: "#1D1D1D60",
+        mdaRed_600: "#F8000030",
       },
       backgroundImage: {
         background1: "url('../images/background1.jpg')",

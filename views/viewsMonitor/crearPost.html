@@ -48,23 +48,8 @@
       <!-- Input de búsqueda -->
       <form action="">
         <label class="input input-bordered flex items-center gap-2 bg-white">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            class="w-4 h-4 opacity-70"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-          <input
-            type="text"
-            class="grow text-mdaBlack"
-            placeholder="Search"
-          />
+          <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+          <input type="text" class="grow text-mdaBlack" placeholder="Search" />
         </label>
       </form>
       <!-- HR -->
@@ -75,33 +60,28 @@
       <div>
         <a href="inicio.html">
           <button
-            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start"
-          >
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
             <i class="fa-solid fa-house"></i>
             Inicio
           </button>
         </a>
         <a href="crearPost.html">
           <button
-            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start"
-          >
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
             <i class="fa-solid fa-plus-minus"></i>
             Crear post
           </button>
         </a>
         <a href="#">
-          <button
-            id="showModal-2"
-            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start"
-          >
+          <button id="showModal-2"
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
             <i class="fa-solid fa-bell"></i>
             Notificaciones
           </button>
         </a>
         <a href="editarPerfilMonitor.html">
           <button
-            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start"
-          >
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
             <i class="fa-regular fa-address-card"></i>
             Perfil
           </button>
@@ -109,15 +89,9 @@
       </div>
     </div>
     <!-- Barra notificaciones -->
-    <nav
-      id="modal-2"
-      class="hidden bg-white p-7 shadow-md absolute top-0 left-full h-screen w-full"
-    >
+    <nav id="modal-2" class="hidden bg-white p-7 shadow-md absolute top-0 left-full h-screen w-full">
       <div class="grid gap-y-5">
-        <button
-          id="closeModal-2"
-          class="btn btn-sm btn-circle btn-ghost text-mdaGreen"
-        >
+        <button id="closeModal-2" class="btn btn-sm btn-circle btn-ghost text-mdaGreen">
           <i class="fa-solid fa-chevron-left"></i>
         </button>
         <!-- HR -->
@@ -128,16 +102,14 @@
           <p class="text-mdaBlack text-sm">
             Daniel Acetaminofén, ha cargado una evidencia
           </p>
-          <button
-            class="btn btn-sm bg-mdaGreen border-none text-white mt-2 hover:bg-mdaGreen w-full"
-          >
+          <button class="btn btn-sm bg-mdaGreen border-none text-white mt-2 hover:bg-mdaGreen w-full">
             Ver evidencia
           </button>
         </div>
       </div>
     </nav>
   </nav>
-  
+
   <div id="modal-2__background" class="hidden bg-mdaBlack_400 w-full min-h-screen absolute"></div>
   <!-- Contenedor para los artículos -->
   <section class="m-auto flex w-full max-w-screen-2xl min-h-screen justify-center p-5 gap-5 flex-wrap content-center">
