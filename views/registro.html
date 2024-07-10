@@ -47,24 +47,21 @@
       </div>
     </div>
     <!-- Formulario -->
-    <form action="autenticacion.html" class="validarFormulario grid">
+    <form id="form" action="autenticacion.html" class="grid">
       <!-- Input correo instittcional -->
-      <label class="validarLabelInput bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
+      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
         <i class="fa-solid fa-envelope text-gray-400"></i>
-        <input type="text" class="validarCorreo grow text-mdaBlack" placeholder="Correo institucional"
-          autocomplete="off" autofocus required />
+        <input id="correo" type="text" class="grow text-mdaBlack" placeholder="Correo institucional" autocomplete="off" autofocus />
       </label>
       <!-- Input contraseña -->
-      <label class="validarLabelContrasena bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
+      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
         <i class="fa-solid fa-lock text-gray-400"></i>
-        <input type="password" class="validarContrasena grow text-mdaBlack" placeholder="Contraseña" autocomplete="off"
-          required />
+        <input id="contrasena" type="password" class="grow text-mdaBlack" placeholder="Contraseña" autocomplete="off" />
       </label>
       <!-- Input confirmar contraseña -->
-      <label class="validarLabelContrasena2 bg-white text-mdaBlack input input-bordered flex items-center gap-2">
+      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
         <i class="fa-solid fa-lock text-gray-400"></i>
-        <input type="password" class="validarContrasena2 grow text-mdaBlack" placeholder="Confirmar contraseña"
-          autocomplete="off" required />
+        <input id="confirmarContrasena" type="password" class="grow text-mdaBlack" placeholder="Confirmar contraseña" autocomplete="off"/>
       </label>
       <button type="submit" class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
         Registrar
@@ -77,7 +74,7 @@
       </p>
   </section>
   <!-- Enlace para manejo del DOM -->
-  <script src="../scripts/script.js"></script>
+  <script type="module" src="../scripts/script.js"></script>
 </body>
 
 </html>
