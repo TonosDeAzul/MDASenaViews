@@ -1,20 +1,27 @@
-// Documento
-const _d = document;
+// // Documento
+// const _d = document;
 
-// Inputs
-const _inputCorreo = _d.getElementById("correo");
-const _inputContrasena = _d.getElementById("contrasena");
-const _inputConfirmarContrasena = _d.getElementById("confirmarContrasena");
+// // Inputs
+// const _inputCorreo = _d.getElementById("correo");
+// const _inputContrasena = _d.getElementById("contrasena");
+// const _inputConfirmarContrasena = _d.getElementById("confirmarContrasena");
 
-export const validarCorreo = () => {
-    const regexEspacio = /^(?!\s*$).+/;
-    const regexInstructor = /^[a-zA-Z0-9.]+@sena\.edu\.co$/i;
-    const regexAprendiz = /^[a-zA-Z0-9.]+@soy\.sena\.edu\.co$/;
-    if (
-        _inputCorreo.value === "" || 
-        !regexEspacio.test(_inputCorreo.value) || 
-        !regexAprendiz.test(_inputCorreo.value) ||
-        !regexInstructor.test(_inputCorreo.value)) {
-        console.log("Xde")
-    }
-}
+// export const validarCorreo = () => {
+//   const regexEspacio = /^(?!\s*$).+/;
+//   const regexInstructor = /^[a-zA-Z0-9.]+@sena\.edu\.co$/i;
+//   const regexAprendiz = /^[a-zA-Z0-9.]+@soy\.sena\.edu\.co$/;
+//   if (
+//     _inputCorreo.value === "" ||
+//     !regexEspacio.test(_inputCorreo.value) ||
+//     (!regexAprendiz.test(_inputCorreo.value) &&
+//     !regexInstructor.test(_inputCorreo.value))
+//   ) {
+//     _inputCorreo.closest("label").classList.add("border-red-600", "border-2");
+//   } else {
+//     _inputCorreo.closest("label").classList.remove("border-red-600", "border-2");
+//   }
+// };
+
+// // export const validarContrasena = () => {
+// //   const 
+// // }

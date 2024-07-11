@@ -1,4 +1,4 @@
-import { validarCorreo } from "./validacionInputs.js";
+import { validarCorreo, validarContrasenas, crearUsuario } from "./registro.js";
 
 // MODAL PARA AGREGAR MONITOR
 const modal = document.getElementById("modal-1");
@@ -17,8 +17,12 @@ const _form = document.getElementById("form");
 const validarForm = (event) => {
   event.preventDefault();
   validarCorreo();
+  validarContrasenas();
+  if(validarCorreo() === false || validarContrasenas() === false){ return; }
+  crearUsuario();
 }
 _form.addEventListener("submit", validarForm);
+
 
 // MODAL PARA NOTIFICACIONES
 const modal_2 = document.getElementById("modal-2");
