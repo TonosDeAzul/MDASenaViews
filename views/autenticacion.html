@@ -33,11 +33,10 @@
       Ingrese el código de verificación <br />
       enviado al correo registrado
     </p>
-    <form action="crearPerfil.html" class="validarFormulario grid">
-      <label class="validarLabelCodigo bg-white text-mdaBlack input input-bordered flex items-center gap-2">
+    <form id="form" action="" class="grid">
+      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
         <i class="fa-solid fa-unlock-keyhole text-gray-400"></i>
-        <input type="text" class="validarCodigo grow text-mdaBlack" placeholder="Código de verificación" autofocus
-          required />
+        <input id="codigo" type="text" class="grow text-mdaBlack" placeholder="Código de verificación" autofocus autocomplete="off"/>
       </label>
       <button type="submit" class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
         Verificar
@@ -45,7 +44,7 @@
     </form>
   </section>
   <!-- Enlace para manejo del DOM -->
-  <script src="../scripts/script.js"></script>
+  <script type="module" src="../scripts/autenticacion.js"></script>
 </body>
 
 </html>

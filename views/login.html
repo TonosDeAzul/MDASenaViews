@@ -46,16 +46,15 @@
         </h1>
       </div>
     </div>
-    <form class="validarFormulario grid">
-      <label class="validarLabelInput bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
+    <form id="form" action="" class="grid">
+      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
         <i class="fa-solid fa-envelope text-gray-400"></i>
-        <input type="email" class="validarCorreo grow text-mdaBlack" placeholder="Correo institucional"
-          autocomplete="off" autofocus required />
+        <input id="correo" type="text" class="grow text-mdaBlack" placeholder="Correo institucional" autocomplete="off"
+          autofocus />
       </label>
-      <label class="validarLabelContrasena bg-white text-mdaBlack input input-bordered flex items-center gap-2">
+      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
         <i class="fa-solid fa-lock text-gray-400"></i>
-        <input type="password" class="validarContrasena grow text-mdaBlack" placeholder="Contraseña" autocomplete="off"
-          required />
+        <input id="contrasena" type="password" class="grow text-mdaBlack" placeholder="Contraseña" autocomplete="off" />
       </label>
       <p class="text-sm text-right mt-1 text-mdaGreen hover:underline">
         <a href="correoInstitucional.html">¿Olvidó su contraseña?</a>
@@ -71,7 +70,7 @@
       </p>
   </section>
   <!-- Enlace para manejo del DOM -->
-  <script src="../scripts/script.js"></script>
+  <script src="../scripts/login.js"></script>
 </body>
 
 </html>

@@ -47,29 +47,27 @@
         </h1>
       </div>
     </div>
-    <form class="validarFormulario grid">
+    <form id="form" action="" class="grid">
       <!-- Nombre -->
       <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
         <i class="fa-solid fa-user text-gray-400"></i>
-        <input id="inputNombre" type="text" class="grow text-mdaBlack" placeholder="Nombre" autocomplete="off" autofocus
-          required />
+        <input id="nombre" type="text" class="grow text-mdaBlack" placeholder="Nombre" autocomplete="off" autofocus/>
       </label>
       <!-- Apellidos -->
       <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
         <i class="fa-solid fa-user text-gray-400"></i>
-        <input id="inputApellidos" type="text" class="grow text-mdaBlack" placeholder="Apellidos" autocomplete="off"
-          required />
+        <input id="apellidos" type="text" class="grow text-mdaBlack" placeholder="Apellidos" autocomplete="off"/>
       </label>
       <!-- Número de documento -->
       <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
         <i class="fa-solid fa-id-card text-gray-400"></i>
-        <input id="inputDocumento" type="text" class="grow text-mdaBlack" placeholder="Número de documento"
-          autocomplete="off" required maxlength="20" />
+        <input id="documento" type="text" class="grow text-mdaBlack" placeholder="Número de documento"
+          autocomplete="off"/>
       </label>
       <!-- Centro de formación -->
       <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
         <i class="fa-solid fa-hospital text-gray-400"></i>
-        <input id="inputCentro" type="text" class="grow text-mdaBlack" placeholder="Centro de formación"
+        <input id="centro" type="text" class="grow text-mdaBlack" placeholder="Centro de formación"
           autocomplete="off" />
       </label>
       <button class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
@@ -78,7 +76,7 @@
     </form>
   </section>
   <!-- Enlace para manejo del DOM -->
-  <script src="../scripts/script.js"></script>
+  <script src="../scripts/crearPerfil.js"></script>
 </body>
 
 </html>
