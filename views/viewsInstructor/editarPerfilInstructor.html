@@ -128,31 +128,33 @@
         <h2 class="text-mdaBlack text-center mb-1">Foto de perfil</h2>
         <img class="w-24" src="../../images/fotoPerfil.svg" alt="" />
       </div>
-      <form action="../login.html" class="grid w-full">
+      <form id="form" action="" class="grid w-full">
         <p class="text-center text-mdaBlack mb-4">Datos básicos del perfil</p>
         <!-- Nombre -->
         <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
           <i class="fa-solid fa-user text-gray-400"></i>
-          <input type="text" class="grow text-mdaBlack" placeholder="Nombre" />
+          <input id="nombre" type="text" class="grow text-mdaBlack" placeholder="Nombre" autocomplete="off"/>
         </label>
         <!-- Apellidos -->
         <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
           <i class="fa-solid fa-user text-gray-400"></i>
-          <input type="text" class="grow text-mdaBlack" placeholder="Apellidos" />
+          <input id="apellidos" type="text" class="grow text-mdaBlack" placeholder="Apellidos" autocomplete="off"/>
         </label>
         <!-- Número de documento -->
         <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
           <i class="fa-solid fa-id-card text-gray-400"></i>
-          <input type="text" class="grow text-mdaBlack" placeholder="Número de documento" />
+          <input id="documento" type="text" class="grow text-mdaBlack" placeholder="Número de documento" autocomplete="off"/>
         </label>
         <!-- Centro de formación -->
         <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
           <i class="fa-solid fa-hospital text-gray-400"></i>
-          <input type="text" class="grow text-mdaBlack" placeholder="Centro de formación" />
+          <input id="centro" type="text" class="grow text-mdaBlack" placeholder="Centro de formación" autocomplete="off"/>
         </label>
         <button class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
           Guardar
         </button>
+      </form>
+      <form action="../login.html" class="grid w-full">
         <button
           class="btn bg-transparent border border-mdaRed text-mdaRed mt-2 hover:bg-mdaRed hover:text-mdaWhite hover:border-mdaRed">
           Cerrar sesión
@@ -166,7 +168,7 @@
   </button>
 
   <!-- Enlace para manejo del DOM -->
-  <script src="../../scripts/script.js"></script>
+  <script src="../../scripts/editarPerfil.js"></script>
 </body>
 
 </html>

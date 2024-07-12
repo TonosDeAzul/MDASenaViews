@@ -38,26 +38,7 @@ if (modal_2 !== null) {
 //   if (validarCorreo() === false || validarContrasenas() === false) { return; }
 //   getUsuario().then(usuario => {
 //     crearUsuario(usuario);
-
 //   });
 // }
 // _form.addEventListener("submit", validarForm);
 
-// Evitar escribir números en el input
-const evitarNumeros = (input) => {
-  input.setAttribute(
-    "onkeypress",
-    `return (
-    (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) 
-    || (event.charCode === 13 || event.charCode === 32)
-    || (event.charCode >= 192 && event.charCode <= 255))`
-  );
-}
-
-// Evitar escribir letras en el input
-const evitarLetras = (input) => {
-  input.setAttribute(
-    "onkeypress",
-    "return (event.charCode >= 48 && event.charCode <= 57 || event.charCode === 13)"
-  );
-}

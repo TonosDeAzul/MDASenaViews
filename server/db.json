@@ -11,15 +11,27 @@
       "correoInstitucional": "a@sena.edu.co",
       "contrasena": "wrq",
       "idRolFK": "1"
+    },
+    {
+      "id": "d999",
+      "correoInstitucional": "daniel.gomez45@soy.sena.edu.co",
+      "contrasena": "wrqwqr",
+      "idRolFK": "2"
+    },
+    {
+      "id": "c82f",
+      "correoInstitucional": "w@sena.edu.co",
+      "contrasena": "wrq",
+      "idRolFK": "1"
     }
   ],
   "tb_perfil": [
     {
       "id": "f867",
-      "nombre": "dsads",
-      "apellidos": "adsadsad",
-      "documento": "21321",
-      "centroFormacion": "dsadsad",
+      "nombre": "Yesid",
+      "apellidos": "Pabón",
+      "documento": "1213123123",
+      "centroFormacion": "CIMI",
       "idUsuarioFk": "f860"
     },
     {
@@ -29,6 +41,14 @@
       "documento": "21",
       "centroFormacion": "dss",
       "idUsuarioFk": "779a"
+    },
+    {
+      "id": "55f1",
+      "nombre": "Daniel Fernando",
+      "apellidos": "Gómez Zayas",
+      "documento": "1096065444",
+      "centroFormacion": "CIMI",
+      "idUsuarioFk": "d999"
     }
   ],
   "tb_rol": [
@@ -47,6 +67,60 @@
   ],
   "tb_rol_operacion": [],
   "tb_operaciones": [],
-  "tb_post": [],
-  "tb_documento": []
+  "tb_post": [
+    {
+      "idPost": "1",
+      "tituloPost": "¿Qué son las pruebas unitarias?",
+      "estado": true,
+      "observacion": null,
+      "idUsuarioFk": "f860",
+      "id": "d860"
+    },
+    {
+      "idPost": "2",
+      "tituloPost": "¿Qué es el DOM?",
+      "estado": false,
+      "observacion": "Falta más investigación",
+      "idUsuarioFk": "779a",
+      "id": "7bf1"
+    },
+    {
+      "idPost": "3",
+      "tituloPost": "¿Qué son las redes neuronales?",
+      "estado": true,
+      "observacion": null,
+      "idUsuarioFk": "d999",
+      "id": "4a96"
+    }
+  ],
+  "tb_documento": [
+    {
+      "idDocumento": "1",
+      "extensionDocumento": ".docx",
+      "documento": "PruebasUnitarias",
+      "idPostFk": "1",
+      "id": "0615"
+    },
+    {
+      "idDocumento": "2",
+      "extensionDocumento": ".docx",
+      "documento": "ManejoDOM",
+      "idPostFk": "2",
+      "id": "10ff"
+    },
+    {
+      "idDocumento": "3",
+      "extensionDocumento": ".pdf",
+      "documento": "RedesNeuronales",
+      "idPostFk": "3",
+      "id": "66b6"
+    },
+    {
+      "idDocumento": "4",
+      "extensionDocumento": ".docx",
+      "documento": "Modelos",
+      "idPostFk": "3",
+      "id": "fd5b"
+    }
+  ]
 }

@@ -53,7 +53,7 @@ const validarContrasena = () => {
 
 /**
  * Función asincrónica para obtener y verificar la existencia del usuario.
- * @returns {boolean} True si el usuario es válido, false si no.
+ * @returns {Object|null} El usuario si es válido, null si no.
  */
 const getUsuario = async () => {
   try {
@@ -63,10 +63,10 @@ const getUsuario = async () => {
     const usuarioEncontrado = data.find(user =>
       user.correoInstitucional === _inputCorreo.value && user.contrasena === _inputContrasena.value
     );
-    return usuarioEncontrado !== undefined;
+    return usuarioEncontrado || null;
   } catch (error) {
     console.error('Error al obtener usuario:', error);
-    return false;
+    return null;
   }
 };
 
