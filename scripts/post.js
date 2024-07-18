@@ -38,10 +38,6 @@ const getDocumentos = () => {
     });
 }
 
-getDocumentos().then(data => {
-  console.log(data);
-})
-
 // Imprimir posts
 Promise.all([getPosts(), getPerfiles()])
   .then(([posts, perfiles]) => {

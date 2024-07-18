@@ -1,111 +1,59 @@
+import { validarInput, valido, invalido, mensajeError } from "./validarInputs.js";
 // Documento
 const _d = document;
-
 // Limpiar localStorage al cargar la página
 _d.addEventListener("DOMContentLoaded", () => {
   localStorage.clear();
 });
-
 // Inputs
 const _inputCorreo = _d.getElementById("correo");
 const _inputContrasena = _d.getElementById("contrasena");
-
 // Formulario
+// export const _body = _d.getElementById("body");
 const _form = _d.getElementById("form");
-
-// Expresiones regulares para validación
-const regexEspacio = /^(?!\s*$).+/;
-const regexInstructor = /^[a-zA-Z0-9.]+@sena\.edu\.co$/i;
-const regexAprendiz = /^[a-zA-Z0-9.]+@soy\.sena\.edu\.co$/;
-
-/**
- * Función para validar el formato del correo electrónico.
- * @returns {boolean} True si el correo es válido, false si no.
- */
-const validarCorreo = () => {
-  if (
-    _inputCorreo.value === "" ||
-    !regexEspacio.test(_inputCorreo.value) ||
-    (!regexAprendiz.test(_inputCorreo.value) &&
-      !regexInstructor.test(_inputCorreo.value))
-  ) {
-    _inputCorreo.closest("label").classList.add("border-red-600", "border-2");
-    return false;
-  } else {
-    _inputCorreo.closest("label").classList.remove("border-red-600", "border-2");
-    return true;
-  }
+// Función para traer usuario
+const getUsuario = () => {
+  return fetch(`http://localhost:3000/tb_usuarios`)
+    .then(response => response.json())
+    .then(data => {
+      return data;
+    });
 };
-
-/**
- * Función para validar que la contraseña no esté vacía.
- * @returns {boolean} True si la contraseña es válida, false si no.
- */
-const validarContrasena = () => {
-  if (_inputContrasena.value === "") {
-    _inputContrasena.closest("label").classList.add("border-red-600", "border-2");
-    return false;
-  } else {
-    _inputContrasena.closest("label").classList.remove("border-red-600", "border-2");
-    return true;
-  }
-};
-
-/**
- * Función asincrónica para obtener y verificar la existencia del usuario.
- * @returns {Object|null} El usuario si es válido, null si no.
- */
-const getUsuario = async () => {
-  try {
-    const response = await fetch(`http://localhost:3000/tb_usuarios`);
-    const data = await response.json();
-    // Verificar si hay un usuario con el correo y contraseña proporcionados
-    const usuarioEncontrado = data.find(user =>
-      user.correoInstitucional === _inputCorreo.value && user.contrasena === _inputContrasena.value
-    );
-    return usuarioEncontrado || null;
-  } catch (error) {
-    console.error('Error al obtener usuario:', error);
-    return null;
-  }
-};
-
-/**
- * Función para validar el formulario antes de enviarlo.
- * @param {Event} event - Evento del formulario.
- */
-const validarForm = async (event) => {
+// Función para validar formulario
+const validarForm = (event) => {
   event.preventDefault();
-  // Validar correo y contrasenaValida
-  const correoValido = validarCorreo();
-  const contrasenaValida = validarContrasena();
-  // Esperar a que se completen las validaciones
-  if (!correoValido || !contrasenaValida) {
+  // Valida que los campos no estén vacíos
+  const inputCorreo = validarInput(_inputCorreo);
+  const inputContrasena = validarInput(_inputContrasena);
+  if(!inputCorreo || !inputContrasena){
     return;
   }
-  try {
-    // Obtener y validar el usuario
-    const usuarioValido = await getUsuario();
+  // Se llama a la función y se guarda su respuesta en el objeto data
+  getUsuario().then(data => {
+    // Se busca dentro del objeto usurio si coinciden el correo y la contraseña
+    const usuarioValido = data.find(
+      usuario => usuario.correoInstitucional === _inputCorreo.value
+        && usuario.contrasena === _inputContrasena.value);
+    // Si se encuentra un usuario con el que coincidan los datos
+    // Se rediccionará a otra vista
     if (usuarioValido) {
-      // Guardar el usuario en localStorage
-      localStorage.setItem('usuario', JSON.stringify(usuarioValido));
-      // Redirigir según el tipo de usuario
-      if (regexAprendiz.test(_inputCorreo.value)) {
-        window.location.href = "viewsAprendiz/inicio.html";
-      } else if (regexInstructor.test(_inputCorreo.value)) {
+      if (usuarioValido.idRolFK === "1") {
         window.location.href = "viewsInstructor/inicio.html";
+      } else if (usuarioValido.idRolFK === "2") {
+        window.location.href = "viewsAprendiz/inicio.html";
       } else {
         window.location.href = "viewsMonitor/inicio.html";
       }
-    } else {
-      // Marcar los labels en rojo si el usuario no es válido
-      _inputCorreo.closest("label").classList.add("border-red-600", "border-2");
-      _inputContrasena.closest("label").classList.add("border-red-600", "border-2");
     }
-  } catch (error) {
-    console.error('Error al validar formulario:', error);
-  }
-};
+    // Si no se encuentra un usuario con el que coincidan los datos
+    // Dirá el error
+    else {
+      mensajeError("Usuario no encontrado, verifique los datos");
+      invalido(_inputCorreo);
+      invalido(_inputContrasena);
+    }
+  });
 
+};
 // Agregar evento de escucha al formulario
 _form.addEventListener("submit", validarForm);
