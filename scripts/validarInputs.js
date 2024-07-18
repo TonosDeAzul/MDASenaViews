@@ -2,6 +2,7 @@
 const _d = document;
 const _body = _d.getElementById("body");
 const _form = _d.getElementById("form");
+const _label = _d.querySelectorAll(".grid label");
 // Cambiar color inputs
 export function invalido(input) {
   input.closest("label").classList.add("border-red-600", "border-2");
@@ -60,28 +61,73 @@ export const validarExtensionCorreo = (input) => {
 // Función para evitar que se escriban letras
 export const evitarLetras = (input) => {
   // Variable para almacenar la referencia al elemento de error
-  let _span;
+  // let _span;
   input.addEventListener("keypress", (event) => {
     const regexLetras = /^[0-9$]/;
     // Si ya existe el mensaje de error, lo elimina
-    if (_span) {
-      _span.remove();
-      _span = null;
-    }
+    // if (_span) {
+    //   _span.remove();
+    //   _span = null;
+    // }
     if (!regexLetras.test(event.key)) {
       event.preventDefault();
       // Crear y mostrar el mensaje de error
-      _span = _d.createElement("span");
-      _span.textContent = "Solo se permiten números";
-      _span.classList.add("text-red-600", "text-center", "mt-5");
-      _form.appendChild(_span);
+      // _span = _d.createElement("span");
+      // _span.textContent = "Solo se permiten números";
+      // _span.classList.add("text-red-600", "text-end", "mt-1");
+      // _form.insertBefore(_span, _label.nextSibling);
     };
   });
-  input.addEventListener("blur", () => {
-    // Eliminar el mensaje de error cuando se pierde el foco
-    if (_span) {
-      _span.remove();
-      _span = null;
+  // input.addEventListener("blur", () => {
+  //   // Eliminar el mensaje de error cuando se pierde el foco
+  //   if (_span) {
+  //     _span.remove();
+  //     _span = null;
+  //   }
+  // });
+};
+// Función para evitar que se escriban números
+export const evitarNumeros = (input) => {
+  // Variable para almacenar la referencia al elemento de error
+  // let _span;
+  input.addEventListener("keypress", (event) => {
+    const regexLetras = /^[a-zA-ZàáâãéêíóôõúüñÑ $]/;
+    // Si ya existe el mensaje de error, lo elimina
+    // if (_span) {
+    //   _span.remove();
+    //   _span = null;
+    // }
+    if (!regexLetras.test(event.key)) {
+      event.preventDefault();
+      // Crear y mostrar el mensaje de error
+      // _span = _d.createElement("span");
+      // _span.textContent = "Solo se permiten letras";
+      // _span.classList.add("text-red-600");
+      // _form.insertBefore(_span, _label.nextSibling);
+    };
+  });
+  // input.addEventListener("blur", () => {
+  //   // Eliminar el mensaje de error cuando se pierde el foco
+  //   if (_span) {
+  //     _span.remove();
+  //     _span = null;
+  //   }
+  // });
+};
+// Función para verificar la longitud
+export const verificarLongitud = (input, minimo, maximo) => {
+  input.addEventListener("keypress", (event) => {
+    if(input.value.length >= maximo){
+      event.preventDefault();
     }
   });
-};
+  if (input.value.length < minimo) {
+    valido(input);
+    invalido(input);
+    return false;
+  } else {
+    valido(input);
+    invalido(input);
+    return true;
+  }
+}

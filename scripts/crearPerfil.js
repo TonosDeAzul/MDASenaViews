@@ -1,3 +1,4 @@
+import { validarInput, valido, invalido, mensajeError, evitarLetras, evitarNumeros } from "./validarInputs.js";
 // Documento
 const _d = document;
 let usuario;
@@ -12,8 +13,8 @@ const _inputDocumento = _d.getElementById("documento");
 const _inputCentro = _d.getElementById("centro");
 // Formulario
 const _form = _d.getElementById("form");
-// Obtener perfil
-const getPerfil = () => {
+// Obtener usuarios
+const getUsuario = () => {
   return fetch(`http://localhost:3000/tb_usuarios`)
     .then(response => response.json())
     .then(data => {
@@ -45,25 +46,30 @@ const crearPerfil = (perfil) => {
     .then((json) => {
       console.log(json);
       // Guardar datos del usuario en localStorage
-      // localStorage.setItem("usuario", JSON.stringify(usuario));
+      localStorage.setItem("usuario", JSON.stringify(usuario));
       _form.reset();
       window.location.href = "login.html";
     });
 }
+evitarNumeros(_inputNombre);
+evitarNumeros(_inputApellidos);
+evitarNumeros(_inputCentro);
+evitarLetras(_inputDocumento);
+
 // Verificar formulario
 const validarForm = (event) => {
-  validarInputs(_inputNombre);
-  validarInputs(_inputApellidos);
-  validarInputs(_inputDocumento);
-  validarInputs(_inputCentro);
   event.preventDefault();
-  if (validarInputs(_inputNombre) === false ||
-    validarInputs(_inputApellidos) === false ||
-    validarInputs(_inputDocumento) === false ||
-    validarInputs(_inputCentro) === false
-  ) { return; }
-  getPerfil().then(perfil => {
-    crearPerfil(perfil);
-  });
+
+  const inputNombre = validarInput(_inputNombre);
+  const inputApellidos = validarInput(_inputApellidos);
+  const inputDocumento = validarInput(_inputDocumento);
+  const inputCentro = validarInput(_inputCentro);
+
+  if(!inputNombre || !inputApellidos || !inputDocumento || !inputCentro){
+    return;
+  }
+
+
+
 };
 _form.addEventListener("submit", validarForm);
