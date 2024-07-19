@@ -5,6 +5,12 @@
       "correoInstitucional": "daniel.gomez45@soy.sena.edu.co",
       "contrasena": "wrq",
       "idRolFK": "2"
+    },
+    {
+      "id": "6546",
+      "correoInstitucional": "yesi@sena.edu.co",
+      "contrasena": "wrq",
+      "idRolFK": "1"
     }
   ],
   "tb_perfil": [
@@ -15,6 +21,14 @@
       "documento": "1096065444",
       "centroFormacion": "CIMI",
       "idUsuarioFk": "4ade"
+    },
+    {
+      "id": "1083",
+      "nombre": "YE",
+      "apellidos": "sdsdsdsd",
+      "documento": "1231231232",
+      "centroFormacion": "sdsdsdsd",
+      "idUsuarioFk": "6546"
     }
   ],
   "tb_rol": [
