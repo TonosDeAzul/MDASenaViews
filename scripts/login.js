@@ -1,4 +1,4 @@
-import { validarInput, valido, invalido, mensajeError } from "./validarInputs.js";
+import { validarInput, valido, invalido, mensajeError, longitudMinima, longitudMaxima, validarExtensionCorreo } from "./validarInputs.js";
 // Documento
 const _d = document;
 // Limpiar localStorage al cargar la página
@@ -19,21 +19,30 @@ const getUsuario = () => {
       return data;
     });
 };
+
+longitudMaxima(_inputCorreo, 50);
+longitudMaxima(_inputContrasena, 100);
+
 // Función para validar formulario
 const validarForm = (event) => {
   event.preventDefault();
+  const longitudCorreo = longitudMinima(_inputCorreo, 10);
+  const longitudContraseña = longitudMinima(_inputContrasena, 8);
   // Valida que los campos no estén vacíos
   const inputCorreo = validarInput(_inputCorreo);
   const inputContrasena = validarInput(_inputContrasena);
-  if(!inputCorreo || !inputContrasena){
+  if(!inputCorreo || !inputContrasena || !longitudCorreo || !longitudContraseña){
     return;
   }
   // Se llama a la función y se guarda su respuesta en el objeto data
   getUsuario().then(data => {
+    validarExtensionCorreo(_inputCorreo);
     // Se busca dentro del objeto usurio si coinciden el correo y la contraseña
     const usuarioValido = data.find(
       usuario => usuario.correoInstitucional === _inputCorreo.value
         && usuario.contrasena === _inputContrasena.value);
+    // Guardar el usuario en localStorage
+    localStorage.setItem('usuario', JSON.stringify(usuarioValido));
     // Si se encuentra un usuario con el que coincidan los datos
     // Se rediccionará a otra vista
     if (usuarioValido) {

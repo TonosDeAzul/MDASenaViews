@@ -1,22 +1,6 @@
 {
-  "tb_usuarios": [
-    {
-      "id": "4ade",
-      "correoInstitucional": "daniel.gomez45@soy.sena.edu.co",
-      "contrasena": "wrq",
-      "idRolFK": "2"
-    }
-  ],
-  "tb_perfil": [
-    {
-      "id": "1f0f",
-      "nombre": "Daniel Fernando",
-      "apellidos": "Gómez Zayas",
-      "documento": "1096065444",
-      "centroFormacion": "CIMI",
-      "idUsuarioFk": "4ade"
-    }
-  ],
+  "tb_usuarios": [],
+  "tb_perfil": [],
   "tb_rol": [
     {
       "id": "1",

@@ -115,7 +115,7 @@
   <div id="modal-2__background" class="hidden bg-mdaBlack_400 w-full min-h-screen absolute"></div>
 
   <!-- Modal agregar monitor -->
-  <section id="modal-1"
+  <!-- <section id="modal-1"
     class="hidden fixed m-auto flex w-full min-h-screen justify-center p-5 gap-5 flex-wrap content-center bg-mdaBlack_400 z-10">
     <article class="bg-white w-full max-w-2xl shadow-md rounded-lg p-5 flex flex-col justify-between gap-5">
       <div class="flex w-full justify-between">
@@ -136,12 +136,12 @@
         <button class="btn bg-mdaGreen border-none text-white hover:bg-mdaGreen w-full mt-4">Agregar</button>
       </form>
     </article>
-  </section>
+  </section> -->
 
   <!-- Contenedor para los artículos -->
   <section class="m-auto flex w-full max-w-screen-2xl min-h-screen justify-center p-5 gap-5 flex-wrap content-center">
     <!-- Contenedor -->
-    <article class="bg-white w-full max-w-2xl shadow-md rounded-lg p-5 flex flex-col justify-between gap-5">
+    <article id="article" class="bg-white w-full max-w-2xl shadow-md rounded-lg p-5 flex flex-col justify-between gap-5">
       <!-- Agregar monitor -->
       <div class="flex w-full justify-between">
         <h3 class="text-mdaBlack text-xl">Administrar monitores</h3>
@@ -165,19 +165,6 @@
         <div class="divider m-0 h-0"></div>
       </div>
       <!-- Quitar monitor -->
-      <div class="w-full bg-mdaWhite rounded-lg p-1">
-        <!-- Monitor #1 -->
-        <div class="flex justify-between items-center">
-          <div class="text-mdaBlack">
-            <i class="fa-solid fa-user-minus mx-2.5"></i>
-            <p class="inline-block">Daniel Acetaminofén</p>
-          </div>
-          <form action="">
-            <button class="btn bg-mdaRed border-none text-white hover:bg-mdaRed">
-              Quitar monitor
-            </button>
-          </form>
-        </div>
       </div>
     </article>
   </section>
@@ -189,7 +176,7 @@
     </button> -->
 
   <!-- Enlace para manejo del DOM -->
-  <script src="../../scripts/script.js"></script>
+  <script type="module" src="../../scripts/asignarMonitor.js"></script>
 </body>
 
 </html>

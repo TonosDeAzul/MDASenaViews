@@ -1,7 +1,7 @@
 import { validarCorreo, validarContrasenas, crearUsuario, getUsuario } from "./registro.js";
 
 // MODAL PARA AGREGAR MONITOR
-const modal = document.getElementById("modal-1");
+export const modal = document.getElementById("modal-1");
 if (modal !== null) {
   const showModal = document.getElementById("showModal");
   showModal.onclick = function () {

@@ -1,4 +1,4 @@
-import { validarInput, valido, invalido, mensajeError, evitarLetras, evitarNumeros } from "./validarInputs.js";
+import { validarInput, valido, invalido, mensajeError, evitarLetras, evitarNumeros, longitudMinima, longitudMaxima } from "./validarInputs.js";
 // Documento
 const _d = document;
 let usuario;
@@ -45,31 +45,38 @@ const crearPerfil = (perfil) => {
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
-      // Guardar datos del usuario en localStorage
-      localStorage.setItem("usuario", JSON.stringify(usuario));
       _form.reset();
       window.location.href = "login.html";
     });
-}
+};
 evitarNumeros(_inputNombre);
+longitudMaxima(_inputNombre, 50);
 evitarNumeros(_inputApellidos);
-evitarNumeros(_inputCentro);
+longitudMaxima(_inputApellidos, 50);
 evitarLetras(_inputDocumento);
-
+longitudMaxima(_inputDocumento, 10);
+evitarNumeros(_inputCentro);
+longitudMaxima(_inputCentro, 100);
 // Verificar formulario
 const validarForm = (event) => {
   event.preventDefault();
-
   const inputNombre = validarInput(_inputNombre);
   const inputApellidos = validarInput(_inputApellidos);
   const inputDocumento = validarInput(_inputDocumento);
   const inputCentro = validarInput(_inputCentro);
-
-  if(!inputNombre || !inputApellidos || !inputDocumento || !inputCentro){
+  const longitudNombre = longitudMinima(_inputNombre, 5);
+  const longitudApellidos = longitudMinima(_inputApellidos, 5);
+  const longitudDocumento = longitudMinima(_inputDocumento, 8);
+  const longitudCentro = longitudMinima(_inputCentro, 4);
+  if (
+    !inputNombre || !inputApellidos ||
+    !inputDocumento || !inputCentro ||
+    !longitudNombre || !longitudApellidos ||
+    !longitudDocumento || !longitudCentro) {
     return;
   }
-
-
-
+  getUsuario().then(data => {
+    crearPerfil(data);
+  })
 };
 _form.addEventListener("submit", validarForm);

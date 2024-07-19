@@ -1,4 +1,4 @@
-import { validarInput, valido, invalido, mensajeError, evitarLetras, verificarLongitud } from "./validarInputs.js";
+import { validarInput, valido, invalido, mensajeError, evitarLetras, longitudMinima, longitudMaxima } from "./validarInputs.js";
 // Documento
 const _d = document;
 let usuario; // Variable para almacenar el usuario actual
@@ -31,13 +31,7 @@ const validarCodigo = () => {
 };
 // Función para evitar que se escriban letras
 evitarLetras(_inputCodigo);
-// Evitar más de 6 números
-// _inputCodigo.addEventListener("keypress", (event) => {
-//   if(_inputCodigo.value.length >= 6){
-//     event.preventDefault();
-//   };
-// });
-verificarLongitud(_inputCodigo, 6, 6);
+longitudMaxima(_inputCodigo, 6)
 // Función para cambiar a la vista de creación de perfil si el código es válido
 const autenticarCodigo = () => {
   _form.reset(); // Reiniciar el formulario
@@ -47,6 +41,7 @@ const autenticarCodigo = () => {
 // Validar el formulario antes de enviarlo
 const validarForm = (event) => {
   event.preventDefault();
+  longitudMinima(_inputCodigo, 6)
   const codigoValido = validarCodigo();
   // Validar el código ingresado por el usuario
   if(!codigoValido){
