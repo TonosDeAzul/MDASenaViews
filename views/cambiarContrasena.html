@@ -19,7 +19,7 @@
   <title>MDA Sena - Restablecimiento de contraseña</title>
 </head>
 
-<body class="bg-mdaWhite grid content-center justify-center min-h-screen w-full p-2.5 bg-background3 bg-cover">
+<body id="body" class="bg-mdaWhite grid content-center justify-center min-h-screen w-full p-2.5 bg-background3 bg-cover">
   <!-- Filtro imagen -->
   <div class="absolute top-0 left-0 min-h-screen w-full bg-mdaBlack_600"></div>
 
@@ -30,22 +30,22 @@
       Establece una nueva contraseña
     </h3>
     <p class="text-center flex justify-center mb-2.5">Cambie su contraseña</p>
-    <form action="login.html" class="grid">
-      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mb-4">
-        <i class="fa-solid fa-lock text-gray-400"></i>
-        <input type="password" class="grow text-mdaBlack" placeholder="Contraseña nueva" autocomplete="off" />
-      </label>
+    <form id="form" action="" class="grid">
       <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
         <i class="fa-solid fa-lock text-gray-400"></i>
-        <input type="password" class="grow text-mdaBlack" placeholder="Confirmar contraseña" />
+        <input id="contrasena" type="password" class="grow text-mdaBlack" placeholder="Contraseña nueva" autocomplete="off" />
       </label>
-      <button class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
+      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
+        <i class="fa-solid fa-lock text-gray-400"></i>
+        <input id="confirmarContrasena" type="password" class="grow text-mdaBlack" placeholder="Confirmar contraseña" />
+      </label>
+      <button type="submit" class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
         Cambiar contraseña
       </button>
     </form>
   </section>
   <!-- Enlace para manejo del DOM -->
-  <script src="../scripts/script.js"></script>
+  <script type="module" src="../scripts/cambiarContrasena.js"></script>
 </body>
 
 </html>

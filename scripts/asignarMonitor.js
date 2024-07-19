@@ -1,4 +1,4 @@
-import { validarInput, valido, invalido, mensajeError, evitarLetras, verificarLongitud } from "./validarInputs.js";
+// import { validarInput, valido, invalido, mensajeError, evitarLetras, verificarLongitud } from "./validarInputs.js";
 // Documento
 const _d = document;
 let usuario; // Variable para almacenar el usuario actual

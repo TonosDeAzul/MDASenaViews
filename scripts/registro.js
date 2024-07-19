@@ -61,30 +61,26 @@ const getUsuario = () => {
 longitudMaxima(_inputCorreo, 50);
 longitudMaxima(_inputContrasena, 100);
 longitudMaxima(_inputConfirmarContrasena, 100);
-
 // Función para validar formulario
 const validarForm = (event) => {
   event.preventDefault();
-
   const inputCorreo = validarInput(_inputCorreo);
   const inputContrasena = validarInput(_inputContrasena);
   const inputConfirmarContrasena = validarInput(_inputConfirmarContrasena);
-
   const longitudCorreo = longitudMinima(_inputCorreo, 10);
   const longitudContrasena = longitudMinima(_inputContrasena, 8);
   const longitudConfirmarContrasena = longitudMinima(_inputConfirmarContrasena, 8);
-
   if(
     !inputCorreo || !inputContrasena || 
     !inputConfirmarContrasena || !longitudCorreo || 
     !longitudContrasena || !longitudConfirmarContrasena
   ){
     return;
-  }
+  };
   const extensionCorreo = validarExtensionCorreo(_inputCorreo);
   if (!extensionCorreo) {
     return;
-  }
+  };
   // Se llama a la función y se guarda su respuesta en el objeto data
   getUsuario().then(data => {
     // Se busca dentro del objeto usuario si ya existe un correo registrado

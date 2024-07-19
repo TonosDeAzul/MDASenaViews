@@ -19,7 +19,7 @@
   <title>MDA Sena - Código de recuperación</title>
 </head>
 
-<body class="bg-mdaWhite grid content-center justify-center min-h-screen w-full p-2.5 bg-background3 bg-cover">
+<body id="body" class="bg-mdaWhite grid content-center justify-center min-h-screen w-full p-2.5 bg-background3 bg-cover">
   <!-- Filtro imagen -->
   <div class="absolute top-0 left-0 min-h-screen w-full bg-mdaBlack_600"></div>
 
@@ -31,10 +31,10 @@
     <p class="text-center flex justify-center mb-2.5">
       Ingrese el código enviado a su correo
     </p>
-    <form action="cambiarContraseña.html" class="grid">
+    <form id="form" action="" class="grid">
       <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
         <i class="fa-solid fa-lock text-gray-400"></i>
-        <input type="text" class="grow text-mdaBlack" placeholder="Codigo de recuperacion" />
+        <input id="codigo" type="text" class="grow text-mdaBlack" placeholder="Codigo de recuperacion" />
       </label>
       <button type="submit" class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
         Verificar
@@ -42,7 +42,7 @@
     </form>
   </section>
   <!-- Enlace para manejo del DOM -->
-  <script src="../scripts/script.js"></script>
+  <script type="module" src="../scripts/codigoRecuperacion.js"></script>
 </body>
 
 </html>
