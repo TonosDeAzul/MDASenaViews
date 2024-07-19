@@ -71,17 +71,17 @@ export const validarExtensionCorreo = (input) => {
   }
 };
 // Función para evitar que se escriban letras
-export const evitarLetras = (input) => {
+export const evitarLetras = (input, maximo) => {
   // Variable para almacenar la referencia al elemento de error
   let _span;
   input.addEventListener("keypress", (event) => {
-    const regexLetras = /^[0-9$]/;
+    const regexNumeros = /^[0-9$]/;
     // Si ya existe el mensaje de error, lo elimina
     if (_span) {
       _span.remove();
       _span = null;
     }
-    if (!regexLetras.test(event.key)) {
+    if (!regexNumeros.test(event.key)) {
       event.preventDefault();
       // Crear y mostrar el mensaje de error
       _span = _d.createElement("span");
