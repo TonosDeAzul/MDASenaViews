@@ -34,6 +34,8 @@ const validarForm = (event) => {
     const usuarioValido = data.find(
       usuario => usuario.correoInstitucional === _inputCorreo.value
         && usuario.contrasena === _inputContrasena.value);
+    // Guardar el usuario en localStorage
+    localStorage.setItem('usuario', JSON.stringify(usuarioValido));
     // Si se encuentra un usuario con el que coincidan los datos
     // Se rediccionará a otra vista
     if (usuarioValido) {

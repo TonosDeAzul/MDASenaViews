@@ -6,7 +6,7 @@ let usuario;
 // Al cargar la página, obtener el usuario de localStorage si existe
 _d.addEventListener("DOMContentLoaded", () => {
   usuario = JSON.parse(localStorage.getItem("usuario"));
-  // console.log(usuario);
+  console.log(usuario);
 });
 
 // Inputs
