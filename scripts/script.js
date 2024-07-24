@@ -1,17 +1,17 @@
 import { validarCorreo, validarContrasenas, crearUsuario, getUsuario } from "./registro.js";
 
 // MODAL PARA AGREGAR MONITOR
-export const modal = document.getElementById("modal-1");
-if (modal !== null) {
-  const showModal = document.getElementById("showModal");
-  showModal.onclick = function () {
-    modal.classList.remove("hidden");
-  };
-  const closeModal = document.getElementById("closeModal");
-  closeModal.onclick = function () {
-    modal.classList.add("hidden");
-  };
-}
+// export const modal = document.getElementById("modal-1");
+// if (modal !== null) {
+//   const showModal = document.getElementById("showModal");
+//   showModal.onclick = function () {
+//     modal.classList.remove("hidden");
+//   };
+//   const closeModal = document.getElementById("closeModal");
+//   closeModal.onclick = function () {
+//     modal.classList.add("hidden");
+//   };
+// }
 
 // MODAL PARA NOTIFICACIONES
 const modal_2 = document.getElementById("modal-2");

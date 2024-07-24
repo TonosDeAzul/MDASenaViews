@@ -1,6 +1,50 @@
 {
-  "tb_usuarios": [],
-  "tb_perfil": [],
+  "tb_usuarios": [
+    {
+      "id": "d2d5",
+      "correoInstitucional": "daniel@sena.edu.co",
+      "contrasena": "12345678",
+      "idRolFK": "1"
+    },
+    {
+      "id": "c702",
+      "correoInstitucional": "q@soy.sena.edu.co",
+      "contrasena": "12345678",
+      "idRolFK": "2"
+    },
+    {
+      "id": "85d4",
+      "correoInstitucional": "e@soy.sena.edu.co",
+      "contrasena": "123456789",
+      "idRolFK": "3"
+    }
+  ],
+  "tb_perfil": [
+    {
+      "id": "c459",
+      "nombre": "Daniel",
+      "apellidos": "Gómez",
+      "documento": "1096065444",
+      "centroFormacion": "CIMI",
+      "idUsuarioFk": "d2d5"
+    },
+    {
+      "id": "e92d",
+      "nombre": "Yesid",
+      "apellidos": "Almeida",
+      "documento": "1096065666",
+      "centroFormacion": "CIMI",
+      "idUsuarioFk": "c702"
+    },
+    {
+      "id": "8094",
+      "nombre": "María",
+      "apellidos": "Ferros",
+      "documento": "1096065777",
+      "centroFormacion": "CIMI",
+      "idUsuarioFk": "85d4"
+    }
+  ],
   "tb_rol": [
     {
       "id": "1",
