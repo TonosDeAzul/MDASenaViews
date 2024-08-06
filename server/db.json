@@ -3,7 +3,7 @@
     {
       "id": "d2d5",
       "correoInstitucional": "daniel@sena.edu.co",
-      "contrasena": "12345678",
+      "contrasena": "1234567890",
       "idRolFK": "1"
     },
     {
@@ -17,6 +17,12 @@
       "correoInstitucional": "e@soy.sena.edu.co",
       "contrasena": "123456789",
       "idRolFK": "3"
+    },
+    {
+      "id": "b8be",
+      "correoInstitucional": "wrq@sena.edu.co",
+      "contrasena": "123456789",
+      "idRolFK": "1"
     }
   ],
   "tb_perfil": [
@@ -43,6 +49,14 @@
       "documento": "1096065777",
       "centroFormacion": "CIMI",
       "idUsuarioFk": "85d4"
+    },
+    {
+      "id": "0fa4",
+      "nombre": "Daniel",
+      "apellidos": "Gómez",
+      "documento": "1096065444",
+      "centroFormacion": "CIMI",
+      "idUsuarioFk": "b8be"
     }
   ],
   "tb_rol": [
@@ -59,8 +73,6 @@
       "nombreRol": "Monitor"
     }
   ],
-  "tb_rol_operacion": [],
-  "tb_operaciones": [],
   "tb_post": [
     {
       "idPost": "1",
@@ -87,7 +99,7 @@
       "id": "4a96"
     }
   ],
-  "tb_documento": [
+  "tb_archivo": [
     {
       "idDocumento": "1",
       "extensionDocumento": ".docx",
