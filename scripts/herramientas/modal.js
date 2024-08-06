@@ -4,7 +4,7 @@ const _body = _d.getElementById("body");
 const _form = _d.getElementById("form");
 const _label = _d.querySelectorAll(".grid label");
 // Modal para confirma la actualización de los datos
-export const modalActualizar = () => {
+export default function modalActualizar() {
   return new Promise((resolve, reject) => { // Use Promise for asynchronous confirmation
     const _section = document.createElement("section");
     _section.classList.add(
@@ -14,7 +14,8 @@ export const modalActualizar = () => {
       "min-h-screen",
       "w-full",
       "justify-center",
-      "items-center"
+      "items-center",
+      "z-10"
     );
     document.body.appendChild(_section);
 

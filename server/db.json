@@ -28,8 +28,8 @@
   "tb_perfil": [
     {
       "id": "c459",
-      "nombre": "Daniel",
-      "apellidos": "Gómez",
+      "nombre": "Daniel Fernando",
+      "apellidos": "Gómez Zayas",
       "documento": "1096065444",
       "centroFormacion": "CIMI",
       "idUsuarioFk": "d2d5"
@@ -52,8 +52,8 @@
     },
     {
       "id": "0fa4",
-      "nombre": "Daniel",
-      "apellidos": "Gómez",
+      "nombre": "Daniel Fernando",
+      "apellidos": "Gómez Zayas",
       "documento": "1096065444",
       "centroFormacion": "CIMI",
       "idUsuarioFk": "b8be"
