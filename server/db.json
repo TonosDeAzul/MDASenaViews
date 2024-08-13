@@ -167,6 +167,16 @@
       "observacion": null,
       "material": "Archivo 20.pdf",
       "idUsuarioFk": "85d4"
+    },
+    {
+      "id": "071a",
+      "tituloPost": "Post prueba 47",
+      "fechaPost": "13/8/2024",
+      "estado": true,
+      "validacion": true,
+      "observacion": null,
+      "material": "prueba 47.pdf",
+      "idUsuarioFk": "c702"
     }
   ]
 }
