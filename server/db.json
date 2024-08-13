@@ -4,45 +4,50 @@
       "id": "d2d5",
       "correoInstitucional": "daniel@sena.edu.co",
       "contrasena": "123123123123",
-      "idRolFK": "1",
-      "asignadoPor": null
+      "idInstructorAsign": null,
+      "idRolFK": "1"
     },
     {
       "id": "c702",
       "correoInstitucional": "q@soy.sena.edu.co",
       "contrasena": "12345678",
-      "idRolFK": "2",
-      "asignadoPor": null
+      "idInstructorAsign": "d2d5",
+      "idRolFK": "3"
     },
     {
       "id": "85d4",
       "correoInstitucional": "e@soy.sena.edu.co",
       "contrasena": "123456789",
-      "idRolFK": "3",
-      "asignadoPor": "d2d5"
+      "idInstructorAsign": "b8be",
+      "idRolFK": "3"
     },
     {
       "id": "b8be",
       "correoInstitucional": "wrq@sena.edu.co",
       "contrasena": "123456789",
-      "idRolFK": "1",
-      "asignadoPor": null
-
+      "idInstructorAsign": null,
+      "idRolFK": "1"
     },
     {
       "id": "dc49",
       "correoInstitucional": "dan@soy.sena.edu.co",
       "contrasena": "123123123123",
-      "idRolFK": "2",
-      "asignadoPor": null
-
+      "idInstructorAsign": null,
+      "idRolFK": "2"
+    },
+    {
+      "id": "4c14",
+      "correoInstitucional": "jfcarreo5@soy.sena.edu.co",
+      "contrasena": "1234567890",
+      "idInstructorAsign": null,
+      "idRolFK": "3"
     }
   ],
   "tb_perfil": [
     {
       "id": "c459",
       "nombre": "Daniel",
-      "apellidos": "Gómez Zayas",
+      "apellidos": "Gómez",
       "documento": "1096065444",
       "centroFormacion": "CIMI",
       "idUsuarioFk": "d2d5"
@@ -78,6 +83,14 @@
       "documento": "1096065444",
       "centroFormacion": "CIMI",
       "idUsuarioFk": "dc49"
+    },
+    {
+      "id": "933e",
+      "nombre": "Jhon Fredy",
+      "apellidos": "Carreño",
+      "documento": "1099737501",
+      "centroFormacion": "Cimi",
+      "idUsuarioFk": "4c14"
     }
   ],
   "tb_rol": [
@@ -96,32 +109,54 @@
   ],
   "tb_post": [
     {
-      "idPost": "1",
-      "tituloPost": "¿Qué son las pruebas unitarias?",
-      "estado": true,
-      "validacion": true,
-      "observacion": null,
-      "idUsuarioFk": "85d4",
-      "id": "d860"
-    },
-    {
-      "idPost": "2",
-      "tituloPost": "¿Qué es el DOM?",
+      "id": "d860",
+      "tituloPost": "Post 1",
+      "fechaPost": "13/8/2024",
       "estado": false,
       "validacion": false,
-      "observacion": "Falta más investigación",
-      "idUsuarioFk": "85d4",
-      "id": "7bf1"
+      "observacion": null,
+      "material": "archivo1.pdf",
+      "idUsuarioFk": "c702"
     },
     {
-      "idPost": "3",
-      "tituloPost": "¿Qué son las redes neuronales?",
+      "id": "7bf1",
+      "tituloPost": "Post 2",
+      "fechaPost": "13/8/2024",
+      "estado": false,
+      "validacion": true,
+      "observacion": "Falta más investigación",
+      "material": "archivo2.pdf",
+      "idUsuarioFk": "85d4"
+    },
+    {
+      "id": "4a96",
+      "tituloPost": "Post 3",
+      "fechaPost": "13/8/2024",
       "estado": true,
       "validacion": true,
       "observacion": null,
-      "idUsuarioFk": "85d4",
-      "id": "4a96"
+      "material": "archivo3.pdf",
+      "idUsuarioFk": "85d4"
+    },
+    {
+      "id": "00d8",
+      "tituloPost": "Post 4",
+      "fechaPost": "13/8/2024",
+      "estado": true,
+      "validacion": true,
+      "observacion": null,
+      "material": "archivo4.pdf",
+      "idUsuarioFk": "c702"
+    },
+    {
+      "id": "cf68",
+      "tituloPost": "Post 5",
+      "fechaPost": "13/8/2024",
+      "estado": false,
+      "validacion": false,
+      "observacion": null,
+      "material": "archivo5.pdf",
+      "idUsuarioFk": "85d4"
     }
-  ],
-  "tb_archivo": []
+  ]
 }

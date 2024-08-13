@@ -103,6 +103,7 @@
           <a href="#tab3" class="tab-link py-2 px-4 inline-block text-mdaBlack cursor-pointer">Rechazados</a>
         </li>
       </ul>
+      <!-- Contenedor post pendientes -->
       <div id="tab1" class="overflow-x-auto tab-content">
         <table class="table overflow-hidden bg-white rounded-ss-none shadow-lg">
           <!-- head -->
@@ -111,15 +112,16 @@
               <th>Fecha</th>
               <th>Nombre monitor</th>
               <th>Título</th>
-              <th>Cantidad archivos</th>
+              <th>Archivo</th>
               <th>Acciones</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="pendientes">
             <!-- Contenido tabla -->
           </tbody>
         </table>
       </div>
+      <!-- Contenedor post aceptados -->
       <div id="tab2" class="overflow-x-auto tab-content">
         <table class="table overflow-hidden bg-white rounded-ss-none shadow-lg">
           <!-- head -->
@@ -128,14 +130,15 @@
               <th>Fecha</th>
               <th>Nombre monitor</th>
               <th>Título</th>
-              <th>Cantidad archivos</th>
+              <th>Archivo</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="aceptados">
             <!-- Contenido tabla -->
           </tbody>
         </table>
       </div>
+      <!-- Contenedor post rechazados -->
       <div id="tab3" class="overflow-x-auto tab-content">
         <table class="table overflow-hidden bg-white rounded-ss-none shadow-lg">
           <!-- head -->
@@ -144,12 +147,12 @@
               <th>Fecha</th>
               <th>Nombre monitor</th>
               <th>Título</th>
-              <th>Cantidad archivos</th>
+              <th>Archivo</th>
               <th>Observación</th>
               <th>Acciones</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="rechazados">
             <!-- Contenido tabla -->
           </tbody>
         </table>
@@ -164,30 +167,9 @@
   </button>
 
   <!-- Enlace para manejo del DOM -->
-  <!-- <script src="../../scripts/tableroControl.js"></script> -->
+  <script type="module" src="../../scripts/vistas/tableroControlInstructor.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const tabLinks = document.querySelectorAll('.tab-link');
-      const tabContents = document.querySelectorAll('.tab-content');
-
-      tabLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          // Remove active class from all links and hide all contents
-          tabLinks.forEach(link => link.classList.remove('bg-white', 'text-mdaBlack'));
-          tabContents.forEach(content => content.classList.remove('active'));
-
-          // Add active class to the clicked link and show corresponding content
-          link.classList.add('bg-white', 'text-mdaBlack');
-          const targetId = link.getAttribute('href').substring(1);
-          document.getElementById(targetId).classList.add('active');
-        });
-      });
-
-      // Show the first tab by default
-      tabLinks[0].click();
-    });
+    
   </script>
 </body>
 
