@@ -4,31 +4,38 @@
       "id": "d2d5",
       "correoInstitucional": "daniel@sena.edu.co",
       "contrasena": "123123123123",
-      "idRolFK": "1"
+      "idRolFK": "1",
+      "asignadoPor": null
     },
     {
       "id": "c702",
       "correoInstitucional": "q@soy.sena.edu.co",
       "contrasena": "12345678",
-      "idRolFK": "2"
+      "idRolFK": "2",
+      "asignadoPor": null
     },
     {
       "id": "85d4",
       "correoInstitucional": "e@soy.sena.edu.co",
       "contrasena": "123456789",
-      "idRolFK": "3"
+      "idRolFK": "3",
+      "asignadoPor": "d2d5"
     },
     {
       "id": "b8be",
       "correoInstitucional": "wrq@sena.edu.co",
       "contrasena": "123456789",
-      "idRolFK": "1"
+      "idRolFK": "1",
+      "asignadoPor": null
+
     },
     {
       "id": "dc49",
       "correoInstitucional": "dan@soy.sena.edu.co",
       "contrasena": "123123123123",
-      "idRolFK": "2"
+      "idRolFK": "2",
+      "asignadoPor": null
+
     }
   ],
   "tb_perfil": [
@@ -92,6 +99,7 @@
       "idPost": "1",
       "tituloPost": "¿Qué son las pruebas unitarias?",
       "estado": true,
+      "validacion": true,
       "observacion": null,
       "idUsuarioFk": "85d4",
       "id": "d860"
@@ -100,6 +108,7 @@
       "idPost": "2",
       "tituloPost": "¿Qué es el DOM?",
       "estado": false,
+      "validacion": false,
       "observacion": "Falta más investigación",
       "idUsuarioFk": "85d4",
       "id": "7bf1"
@@ -108,39 +117,11 @@
       "idPost": "3",
       "tituloPost": "¿Qué son las redes neuronales?",
       "estado": true,
+      "validacion": true,
       "observacion": null,
       "idUsuarioFk": "85d4",
       "id": "4a96"
     }
   ],
-  "tb_archivo": [
-    {
-      "idDocumento": "1",
-      "extensionDocumento": ".docx",
-      "documento": "PruebasUnitarias",
-      "idPostFk": "1",
-      "id": "0615"
-    },
-    {
-      "idDocumento": "2",
-      "extensionDocumento": ".docx",
-      "documento": "ManejoDOM",
-      "idPostFk": "2",
-      "id": "10ff"
-    },
-    {
-      "idDocumento": "3",
-      "extensionDocumento": ".pdf",
-      "documento": "RedesNeuronales",
-      "idPostFk": "3",
-      "id": "66b6"
-    },
-    {
-      "idDocumento": "4",
-      "extensionDocumento": ".docx",
-      "documento": "Modelos",
-      "idPostFk": "3",
-      "id": "fd5b"
-    }
-  ]
+  "tb_archivo": []
 }
