@@ -1,3 +1,4 @@
+// import { evitarLetras } from "./validarInputs.js";
 import evitarCaracteres from "../validaciones/evitarCaracteres.js";
 
 // Documento
@@ -11,6 +12,7 @@ _d.addEventListener("DOMContentLoaded", () => {
   usuario = JSON.parse(localStorage.getItem("usuario"));
 });
 
+const _input = _d.querySelector("#buscador");
 const _article = _d.getElementById("article");
 
 // Función para traer aprendices
@@ -48,6 +50,7 @@ const actualizarRol = (idUsuario, data) => {
 
 const eliminarMonitor = (nombreMonitor, usuario) => {
   const _divHijo = _d.createElement("div");
+  _divHijo.setAttribute("id", "monitor");
   _divHijo.classList.add("flex", "justify-between", "items-center", "p-1");
   _divPadre.appendChild(_divHijo);
   const _div = _d.createElement("div");
@@ -72,11 +75,26 @@ const eliminarMonitor = (nombreMonitor, usuario) => {
   _divHijo.appendChild(_button);
 
   _button.addEventListener("click", () => {
-    // usuario.idRolFK = "2";
-    // actualizarRol(usuario.id, usuario);
     mostrarConfirmacionQuitar(nombreMonitor, usuario);
-    // _divPadre.removeChild(_divHijo);
   });
+
+  const _monitores = _d.querySelectorAll("#monitor");
+
+  _input.addEventListener("input", () => {
+    const _valor = _input.value.toLowerCase();
+    _monitores.forEach((_element) => {
+      const _nombreMonitor = _element.querySelector("div > p").textContent.toLowerCase();
+      
+      if (_nombreMonitor.includes(_valor)) {
+        _element.classList.remove("hidden");
+        _element.classList.add("block");
+      }
+      else {
+        _element.classList.remove("block");
+        _element.classList.add("hidden");
+      }
+    })
+  })
 };
 
 getAprendiz().then((usuarios) => {

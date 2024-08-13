@@ -9,6 +9,10 @@ _d.addEventListener("DOMContentLoaded", () => {
   // console.log(usuario);
 });
 
+// Atrapar el input del buscador
+const _input = _d.querySelector("#buscador");
+
+
 // Contenedor de los posts
 const _postContainer = _d.getElementById("postContainer");
 
@@ -56,6 +60,7 @@ Promise.all([getPosts(), getPerfiles()])
         "flex-col",
         "justify-between"
       );
+      _article.setAttribute("id", "articulos");
 
       // Nombre aprendiz
       const _p = _d.createElement("p");
@@ -105,4 +110,26 @@ Promise.all([getPosts(), getPerfiles()])
         _a.appendChild(_i); 
       }
     });
+
+    // Capturar cantidad de articulsos
+    const _articulos = _d.querySelectorAll("#articulos");
+
+    // Evento para el buscador
+    _input.addEventListener("input", () => {
+      const _valor = _input.value.toLowerCase();
+      _articulos.forEach((_post) => {
+        const _titlePost = _post.textContent.toLowerCase();
+        if (_titlePost.includes(_valor)) {
+          _post.classList.remove("hidden");
+          _post.classList.add("block");
+        }
+        else {
+          _post.classList.remove("block");
+          _post.classList.add("hidden");
+        }
+      }
+    )
+    })
   });
+
+

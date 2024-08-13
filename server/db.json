@@ -93,7 +93,7 @@
       "tituloPost": "¿Qué son las pruebas unitarias?",
       "estado": true,
       "observacion": null,
-      "idUsuarioFk": "1180",
+      "idUsuarioFk": "85d4",
       "id": "d860"
     },
     {
@@ -101,7 +101,7 @@
       "tituloPost": "¿Qué es el DOM?",
       "estado": false,
       "observacion": "Falta más investigación",
-      "idUsuarioFk": "1180",
+      "idUsuarioFk": "85d4",
       "id": "7bf1"
     },
     {
@@ -109,7 +109,7 @@
       "tituloPost": "¿Qué son las redes neuronales?",
       "estado": true,
       "observacion": null,
-      "idUsuarioFk": "1180",
+      "idUsuarioFk": "85d4",
       "id": "4a96"
     }
   ],
