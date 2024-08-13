@@ -16,18 +16,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>MDA Sena - Crear perfil</title>
+  <title>MDA SENA - crear perfil</title>
 </head>
 
-<body id="body" class="bg-mdaWhite grid content-center justify-center min-h-screen w-full p-2.5 bg-background4 bg-cover">
-  <!-- Ingrese aquí la estrucuta de la página -->
+<body id="body"
+  class="bg-mdaWhite grid content-center justify-center min-h-screen w-full p-2.5 bg-background4 bg-cover">
 
   <!-- Filtro imagen -->
   <div class="absolute top-0 left-0 min-h-screen w-full bg-mdaBlack_600"></div>
 
-  <!-- Contenedor de login -->
+  <!-- Contenedor -->
   <section class="container grid bg-white p-7 rounded-lg shadow-md w-full md:w-96 z-10">
-    <!--  -->
+    <!-- Texto informativo -->
     <h3 class="text-mdaBlack text-xl text-center mb-2.5">
       Bienvenido, ingrese los siguiente datos y cree su perfil
     </h3>
@@ -47,22 +47,22 @@
         </h1>
       </div>
     </div>
-    <form id="form" action="" class="grid">
+    <form id="form" class="grid">
       <!-- Nombre -->
       <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
         <i class="fa-solid fa-user text-gray-400"></i>
-        <input id="nombre" type="text" class="grow text-mdaBlack" placeholder="Nombre" autocomplete="off" autofocus/>
+        <input id="nombre" type="text" class="grow text-mdaBlack" placeholder="Nombre" autocomplete="off" autofocus />
       </label>
       <!-- Apellidos -->
       <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
         <i class="fa-solid fa-user text-gray-400"></i>
-        <input id="apellidos" type="text" class="grow text-mdaBlack" placeholder="Apellidos" autocomplete="off"/>
+        <input id="apellidos" type="text" class="grow text-mdaBlack" placeholder="Apellidos" autocomplete="off" />
       </label>
       <!-- Número de documento -->
       <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
         <i class="fa-solid fa-id-card text-gray-400"></i>
         <input id="documento" type="text" class="grow text-mdaBlack" placeholder="Número de documento"
-          autocomplete="off"/>
+          autocomplete="off" />
       </label>
       <!-- Centro de formación -->
       <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
@@ -75,6 +75,7 @@
       </button>
     </form>
   </section>
+  
   <!-- Enlace para manejo del DOM -->
   <script type="module" src="../scripts/vistas/crearPerfil.js"></script>
 </body>

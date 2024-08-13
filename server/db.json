@@ -3,7 +3,7 @@
     {
       "id": "d2d5",
       "correoInstitucional": "daniel@sena.edu.co",
-      "contrasena": "1234567890",
+      "contrasena": "123123123123",
       "idRolFK": "1"
     },
     {
@@ -23,12 +23,18 @@
       "correoInstitucional": "wrq@sena.edu.co",
       "contrasena": "123456789",
       "idRolFK": "1"
+    },
+    {
+      "id": "dc49",
+      "correoInstitucional": "dan@soy.sena.edu.co",
+      "contrasena": "123123123123",
+      "idRolFK": "3"
     }
   ],
   "tb_perfil": [
     {
       "id": "c459",
-      "nombre": "Daniel Fernando",
+      "nombre": "Daniel",
       "apellidos": "Gómez Zayas",
       "documento": "1096065444",
       "centroFormacion": "CIMI",
@@ -57,6 +63,14 @@
       "documento": "1096065444",
       "centroFormacion": "CIMI",
       "idUsuarioFk": "b8be"
+    },
+    {
+      "id": "dfc4",
+      "nombre": "Daniel",
+      "apellidos": "Gómez",
+      "documento": "1096065444",
+      "centroFormacion": "CIMI",
+      "idUsuarioFk": "dc49"
     }
   ],
   "tb_rol": [

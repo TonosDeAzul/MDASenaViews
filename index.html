@@ -1,117 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Enlace para estilos personalizados -->
-    <link rel="stylesheet" href="styles/style.css" />
-    <!-- Enlace con la librería Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Enlace para personalización de colores en Tailwind -->
-    <script src="scripts/tailwind.js"></script>
-    <!-- Enlace con la libería DaisyUI -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- Enlace para iconos de Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>MDA Sena - Inicio</title>
-  </head>
 
-  <body class="flex bg-mdaWhite bg-gradient-to-t from-mdaGreen_400 to-mdaWhite">
-    <!-- Ingrese aquí la estrucuta de la página -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Enlace para estilos personalizados -->
+  <link rel="stylesheet" href="styles/style.css" />
+  <!-- Enlace con la librería Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Enlace para personalización de colores en Tailwind -->
+  <script src="scripts/tailwind.js"></script>
+  <!-- Enlace con la libería DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <!-- Enlace para iconos de Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>MDA SENA - Inicio</title>
+</head>
 
-    <!-- Barra lateral izquierda -->
-    <nav class="bg-white p-7 shadow-md sticky top-0 h-screen">
-      <div class="grid gap-y-5">
-        <!-- Logo Sena y nombre del proyecto -->
-        <div class="flex flex-row w-full h-32">
-          <!-- Logo -->
-          <div class="grid flex-grow place-items-center w-full">
-            <img src="images/LogoNegro.svg" alt="" />
-          </div>
-          <!-- HR -->
-          <div class="divider divider-horizontal"></div>
-          <!-- Nombre -->
-          <div class="grid flex-grow place-items-center w-full">
-            <h1 class="text-4xl text-mdaBlack leading-none">
-              <span class="text-3xl text-mdaGreen">MDA</span> <br />
-              Sena
-            </h1>
-          </div>
+<body class="flex bg-mdaWhite bg-gradient-to-t from-mdaGreen_400 to-mdaWhite">
+
+  <!-- Barra lateral izquierda -->
+  <aside class="bg-white p-7 shadow-md sticky top-0 h-screen">
+    <section class="grid gap-y-5">
+      <!-- Logo Sena y nombre del proyecto -->
+      <div class="flex flex-row w-full h-32">
+        <!-- Logo -->
+        <div class="grid flex-grow place-items-center w-full">
+          <img src="images/LogoNegro.svg" alt="" />
         </div>
         <!-- HR -->
-        <div class="flex flex-col w-full">
-          <div class="divider m-0 h-0"></div>
-        </div>
-        <!-- Input de búsqueda -->
-        <form action="">
-          <label class="input input-bordered flex items-center gap-2 bg-white">
-            <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
-            <input
-              type="text"
-              class="grow text-mdaBlack"
-              placeholder="Search"
-            />
-          </label>
-        </form>
-        <!-- HR -->
-        <div class="flex flex-col w-full">
-          <div class="divider m-0 h-0"></div>
-        </div>
-        <!-- Botones -->
-        <div>
-          <!-- Botón para iniciar sesión -->
-          <a href="views/login.html">
-            <button
-              class="btn w-full mb-2.5 bg-mdaGreen border-none text-white hover:bg-mdaGreen"
-            >
-              Ingrese
-            </button>
-          </a>
-          <!-- Botón para registrrse -->
-          <a href="views/registro.html">
-            <button
-              class="btn w-full border-mdaBlack bg-white text-mdaBlack hover:bg-white"
-            >
-              Regístrese
-            </button>
-          </a>
+        <div class="divider divider-horizontal"></div>
+        <!-- Nombre -->
+        <div class="grid flex-grow place-items-center w-full">
+          <h1 class="text-5xl text-mdaBlack leading-none">
+            <span class="text-4xl text-mdaGreen">MDA</span> <br />
+            SENA
+          </h1>
         </div>
       </div>
-    </nav>
-    <!-- Contenedor para los artículos -->
-    <section
-      class="m-auto flex w-full max-w-screen-2xl min-h-screen justify-center p-5 gap-5 flex-wrap content-start"
-    >
-      <!-- Artículo -->
-      <article
-        class="bg-white w-full max-w-2xl h-40 shadow-md rounded-lg p-5 flex flex-col justify-between"
-      >
-        <div class="text-mdaBlack text-sm">
-          <p><b>Nombre aprendiz</b></p>
-        </div>
-        <div class="text-mdaGreen">
-          <h2 class="text-4xl mb-2 truncate" title="TITULO DEL POST 1">
-            <b>TITULO DEL POST 1</b>
-          </h2>
-          <a class="text-base hover:underline" href="#"
-            >Nombre del documento.docx
-            <i class="fa-solid fa-arrow-down"></i>
-          </a>
-        </div>
+      <!-- HR -->
+      <div class="flex flex-col w-full">
+        <div class="divider m-0 h-0"></div>
+      </div>
+      <!-- Input de búsqueda -->
+      <form action="">
+        <label class="input input-bordered flex items-center gap-2 bg-white">
+          <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+          <input type="text" class="grow text-mdaBlack" placeholder="Search" />
+        </label>
+      </form>
+      <!-- HR -->
+      <div class="flex flex-col w-full">
+        <div class="divider m-0 h-0"></div>
+      </div>
+      <!-- Botones -->
+      <div>
+        <!-- Botón para iniciar sesión -->
+        <a href="views/login.html" class="btn w-full mb-2.5 bg-mdaGreen border-none text-white hover:bg-mdaGreen">
+          Ingrese
+        </a>
+        <!-- Botón para registrrse -->
+        <a href="views/registro.html" class="btn w-full border-mdaBlack bg-white text-mdaBlack hover:bg-white">
+          Regístrese
+        </a>
+      </div>
+    </section>
+  </aside>
+  
+  <!-- Contenedor para los artículos -->
+  <main class="m-auto flex w-full max-w-screen-2xl min-h-screen justify-center p-5 gap-5 flex-wrap content-start">
+    <!-- Artículo -->
+    <section class="bg-white w-full max-w-2xl h-40 shadow-md rounded-lg p-5 flex flex-col justify-between">
+      <!-- Nombre del aprendiz -->
+      <article class="text-mdaBlack text-sm">
+        <p><b>Nombre aprendiz</b></p>
+      </article>
+      <!-- Título del post -->
+      <article class="text-mdaGreen">
+        <h2 class="text-4xl mb-2 truncate" title="TITULO DEL POST 1">
+          <b>TÍTULO DEL POST 1</b>
+        </h2>
+        <!-- Archivo -->
+        <a class="text-base hover:underline" href="#">Nombre del documento.docx
+          <i class="fa-solid fa-arrow-down"></i>
+        </a>
       </article>
     </section>
+  </main>
 
-    <!-- Enlace para manejo del DOM -->
-    <script src="scripts/script.js"></script>
-  </body>
+  <!-- Enlace para manejo del DOM -->
+  <script src="scripts/script.js"></script>
+</body>
+
 </html>

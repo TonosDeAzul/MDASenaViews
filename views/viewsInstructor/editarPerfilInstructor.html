@@ -20,11 +20,10 @@
 </head>
 
 <body class="flex bg-mdaWhite bg-gradient-to-t from-mdaGreen_400 to-mdaWhite">
-  <!-- Ingrese aquí la estrucuta de la página -->
 
   <!-- Barra lateral izquierda -->
-  <nav class="bg-white p-7 shadow-md sticky top-0 h-screen z-10">
-    <div class="grid gap-y-5">
+  <aside class="bg-white p-7 shadow-md sticky top-0 h-screen z-10">
+    <section class="grid gap-y-5">
       <!-- Logo Sena y nombre del proyecto -->
       <div class="flex flex-row w-full h-32">
         <!-- Logo -->
@@ -59,109 +58,75 @@
       <!-- Botones navegación -->
       <div>
         <!-- Inicio -->
-        <a href="inicio.html">
-          <button
-            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-            <i class="fa-solid fa-house"></i>
-            Inicio
-          </button>
+        <a href="inicio.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-solid fa-house"></i>
+          Inicio
         </a>
         <!-- Asignar monitor -->
-        <a href="asignarMonitor.html">
-          <button
-            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-            <i class="fa-solid fa-user-plus"></i>
-            Asignar monitor
-          </button>
+        <a href="asignarMonitor.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-solid fa-user-plus"></i>
+          Asignar monitor
         </a>
-        <a href="#">
-          <button id="showModal-2"
-            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-            <i class="fa-solid fa-bell"></i>
-            Notificaciones
-          </button>
+        <a href="panelPublicaciones.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-solid fa-bell"></i>
+          Tablero de control
         </a>
-        <a href="editarPerfilInstructor.html">
-          <button
-            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-            <i class="fa-regular fa-address-card"></i>
-            Perfil
-          </button>
+        <a href="editarPerfilInstructor.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-regular fa-address-card"></i>
+          Perfil
         </a>
       </div>
-    </div>
-    <!-- Barra notificaciones -->
-    <nav id="modal-2" class="hidden bg-white p-7 shadow-md absolute top-0 left-full h-screen w-full">
-      <div class="grid gap-y-5">
-        <button id="closeModal-2" class="btn btn-sm btn-circle btn-ghost text-mdaGreen">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <!-- HR -->
-        <div class="flex flex-col w-full">
-          <div class="divider m-0 h-0"></div>
-        </div>
-        <div>
-          <p class="text-mdaBlack text-sm">
-            Daniel Acetaminofén, ha cargado una evidencia
-          </p>
-          <button class="btn btn-sm bg-mdaGreen border-none text-white mt-2 hover:bg-mdaGreen w-full">
-            Ver evidencia
-          </button>
-        </div>
-      </div>
-    </nav>
-  </nav>
+    </section>
+  </aside>
 
-  <div id="modal-2__background" class="hidden bg-mdaBlack_400 w-full min-h-screen absolute"></div>
-
-  <!-- Contenedor para los artículos -->
-  <section class="m-auto flex w-full justify-center">
-    <!-- Artículo -->
+  <!-- Contenedor -->
+  <main class="m-auto flex w-full justify-center">
+    <!-- Contenedor formulario -->
     <section class="container grid bg-white p-7 rounded-lg shadow-md w-full md:w-96">
       <!-- Texto informativo -->
       <h3 class="text-mdaBlack text-2xl text-center mb-1">Perfil</h3>
       <p class="text-mdaBlack text-center font-thin mb-4">
         Actualiza tus datos personales
       </p>
-      <!-- Foto de perfil -->
-      <!-- <div class="flex items-center flex-col mb-4">
-        <h2 class="text-mdaBlack text-center mb-1">Foto de perfil</h2>
-        <img class="w-24" src="../../images/fotoPerfil.svg" alt="" />
-      </div> -->
+      <!-- Formulario para actualizar datos -->
       <form id="form" action="" class="grid w-full">
-        <!-- <p class="text-center text-mdaBlack mb-4">Datos básicos del perfil</p> -->
         <!-- Nombre -->
         <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
           <i class="fa-solid fa-user text-gray-400"></i>
-          <input id="nombre" type="text" class="grow text-mdaBlack" placeholder="Nombre" autocomplete="off"/>
+          <input id="nombre" type="text" class="grow text-mdaBlack" placeholder="Nombre" autocomplete="off" />
         </label>
         <!-- Apellidos -->
         <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
           <i class="fa-solid fa-user text-gray-400"></i>
-          <input id="apellidos" type="text" class="grow text-mdaBlack" placeholder="Apellidos" autocomplete="off"/>
+          <input id="apellidos" type="text" class="grow text-mdaBlack" placeholder="Apellidos" autocomplete="off" />
         </label>
         <!-- Número de documento -->
         <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
           <i class="fa-solid fa-id-card text-gray-400"></i>
-          <input id="documento" type="text" class="grow text-mdaBlack" placeholder="Número de documento" autocomplete="off"/>
+          <input id="documento" type="text" class="grow text-mdaBlack" placeholder="Número de documento"
+            autocomplete="off" />
         </label>
         <!-- Centro de formación -->
         <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
           <i class="fa-solid fa-hospital text-gray-400"></i>
-          <input id="centro" type="text" class="grow text-mdaBlack" placeholder="Centro de formación" autocomplete="off"/>
+          <input id="centro" type="text" class="grow text-mdaBlack" placeholder="Centro de formación"
+            autocomplete="off" />
         </label>
-        <button class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
-          Guardar
+        <button type="submit" class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
+          Actualizar
         </button>
       </form>
-      <form action="../login.html" class="grid w-full">
-        <button
-          class="btn bg-transparent border border-mdaRed text-mdaRed mt-2 hover:bg-mdaRed hover:text-mdaWhite hover:border-mdaRed">
-          Cerrar sesión
-        </button>
-      </form>
+      <a href="../login.html"
+        class="grid w-full btn bg-transparent border border-mdaRed text-mdaRed mt-2 hover:bg-mdaRed hover:text-mdaWhite hover:border-mdaRed">
+        Cerrar sesión
+      </a>
     </section>
-  </section>
+  </main>
+
   <!-- Indicador de rol -->
   <button class="bg-white btn btn-sm border-none text-mdaBlack absolute top-0 right-0 m-2.5 hover:bg-white">
     <i class="fa-solid fa-user"></i>Instructor
