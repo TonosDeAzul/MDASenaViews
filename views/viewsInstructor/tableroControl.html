@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>MDA Sena - Editar perfil</title>
+  <title>MDA SENA - Inicio</title>
 </head>
 
 <body class="flex bg-mdaWhite bg-gradient-to-t from-mdaGreen_400 to-mdaWhite">
@@ -83,48 +83,79 @@
     </section>
   </aside>
 
-  <!-- Contenedor -->
-  <main class="m-auto flex w-full justify-center">
-    <!-- Contenedor formulario -->
-    <section class="container grid bg-white p-7 rounded-lg shadow-md w-full md:w-96">
-      <!-- Texto informativo -->
-      <h3 class="text-mdaBlack text-2xl text-center mb-1">Perfil</h3>
-      <p class="text-mdaBlack text-center font-thin mb-4">
-        Actualiza tus datos personales
-      </p>
-      <!-- Formulario para actualizar datos -->
-      <form id="form" action="" class="grid w-full">
-        <!-- Nombre -->
-        <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2">
-          <i class="fa-solid fa-user text-gray-400"></i>
-          <input id="nombre" type="text" class="grow text-mdaBlack" placeholder="Nombre" autocomplete="off" />
-        </label>
-        <!-- Apellidos -->
-        <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
-          <i class="fa-solid fa-user text-gray-400"></i>
-          <input id="apellidos" type="text" class="grow text-mdaBlack" placeholder="Apellidos" autocomplete="off" />
-        </label>
-        <!-- Número de documento -->
-        <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
-          <i class="fa-solid fa-id-card text-gray-400"></i>
-          <input id="documento" type="text" class="grow text-mdaBlack" placeholder="Número de documento"
-            autocomplete="off" />
-        </label>
-        <!-- Centro de formación -->
-        <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
-          <i class="fa-solid fa-hospital text-gray-400"></i>
-          <input id="centro" type="text" class="grow text-mdaBlack" placeholder="Centro de formación"
-            autocomplete="off" />
-        </label>
-        <button type="submit" class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
-          Actualizar
-        </button>
-      </form>
-      <a href="../login.html"
-        class="grid w-full btn bg-transparent border border-mdaRed text-mdaRed mt-2 hover:bg-mdaRed hover:text-mdaWhite hover:border-mdaRed">
-        Cerrar sesión
-      </a>
+  <!-- Tablero de control -->
+  <main class="container p-4 w-9/12 min-h-screen m-auto">
+
+    <!-- Indicador de sección -->
+    <h1 class="text-black text-xl mb-4 font-bold">Dashboard del instructor</h1>
+
+    <section class="tabs text-black">
+      <!-- Pestañas -->
+      <ul class="flex border-b">
+        <li class="mr-1">
+          <a href="#tab1"
+            class="tab-link rounded-t-lg bg-white py-2 px-4 inline-block text-mdaBlack cursor-pointer">Pendientes</a>
+        </li>
+        <li class="mr-1">
+          <a href="#tab2" class="tab-link py-2 px-4 inline-block text-mdaBlack cursor-pointer">Aceptados</a>
+        </li>
+        <li class="mr-1">
+          <a href="#tab3" class="tab-link py-2 px-4 inline-block text-mdaBlack cursor-pointer">Rechazados</a>
+        </li>
+      </ul>
+      <div id="tab1" class="overflow-x-auto tab-content">
+        <table class="table overflow-hidden bg-white rounded-ss-none shadow-lg">
+          <!-- head -->
+          <thead>
+            <tr class="text-black text-md text-center">
+              <th>Fecha</th>
+              <th>Nombre monitor</th>
+              <th>Título</th>
+              <th>Cantidad archivos</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Contenido tabla -->
+          </tbody>
+        </table>
+      </div>
+      <div id="tab2" class="overflow-x-auto tab-content">
+        <table class="table overflow-hidden bg-white rounded-ss-none shadow-lg">
+          <!-- head -->
+          <thead>
+            <tr class="text-black text-md text-center">
+              <th>Fecha</th>
+              <th>Nombre monitor</th>
+              <th>Título</th>
+              <th>Cantidad archivos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Contenido tabla -->
+          </tbody>
+        </table>
+      </div>
+      <div id="tab3" class="overflow-x-auto tab-content">
+        <table class="table overflow-hidden bg-white rounded-ss-none shadow-lg">
+          <!-- head -->
+          <thead>
+            <tr class="text-black text-md text-center">
+              <th>Fecha</th>
+              <th>Nombre monitor</th>
+              <th>Título</th>
+              <th>Cantidad archivos</th>
+              <th>Observación</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Contenido tabla -->
+          </tbody>
+        </table>
+      </div>
     </section>
+
   </main>
 
   <!-- Indicador de rol -->
@@ -133,7 +164,31 @@
   </button>
 
   <!-- Enlace para manejo del DOM -->
-  <script type="module" src="../../scripts/vistas/editarPerfil.js"></script>
+  <!-- <script src="../../scripts/tableroControl.js"></script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabLinks = document.querySelectorAll('.tab-link');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      tabLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // Remove active class from all links and hide all contents
+          tabLinks.forEach(link => link.classList.remove('bg-white', 'text-mdaBlack'));
+          tabContents.forEach(content => content.classList.remove('active'));
+
+          // Add active class to the clicked link and show corresponding content
+          link.classList.add('bg-white', 'text-mdaBlack');
+          const targetId = link.getAttribute('href').substring(1);
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+
+      // Show the first tab by default
+      tabLinks[0].click();
+    });
+  </script>
 </body>
 
 </html>

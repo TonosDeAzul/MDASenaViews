@@ -81,19 +81,107 @@
     </section>
   </aside>
 
-  <!-- Contenedor para los artículos -->
-  <main id="postContainer"
-    class="m-auto flex w-full max-w-screen-2xl min-h-screen justify-center p-5 gap-5 flex-wrap content-start">
-    <!-- Artículo -->
+  <!-- Tablero de control -->
+  <main class="container p-4 w-9/12 min-h-screen m-auto">
+
+    <!-- Indicador de sección -->
+    <h1 class="text-black text-xl mb-4 font-bold">Dashboard del monitor</h1>
+
+    <section class="tabs text-black">
+      <!-- Pestañas -->
+      <ul class="flex border-b">
+        <li class="mr-1">
+          <a href="#tab1"
+            class="tab-link rounded-t-lg bg-white py-2 px-4 inline-block text-mdaBlack cursor-pointer">Pendientes</a>
+        </li>
+        <li class="mr-1">
+          <a href="#tab2" class="tab-link py-2 px-4 inline-block text-mdaBlack cursor-pointer">Aceptados</a>
+        </li>
+        <li class="mr-1">
+          <a href="#tab3" class="tab-link py-2 px-4 inline-block text-mdaBlack cursor-pointer">Rechazados</a>
+        </li>
+      </ul>
+      <div id="tab1" class="overflow-x-auto tab-content">
+        <table class="table overflow-hidden bg-white rounded-ss-none shadow-lg">
+          <!-- head -->
+          <thead>
+            <tr class="text-black text-md text-center">
+              <th>Fecha</th>
+              <th>Título</th>
+              <th>Cantidad archivos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Contenido tabla -->
+          </tbody>
+        </table>
+      </div>
+      <div id="tab2" class="overflow-x-auto tab-content">
+        <table class="table overflow-hidden bg-white rounded-ss-none shadow-lg">
+          <!-- head -->
+          <thead>
+            <tr class="text-black text-md text-center">
+              <th>Fecha</th>
+              <th>Título</th>
+              <th>Cantidad archivos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Contenido tabla -->
+          </tbody>
+        </table>
+      </div>
+      <div id="tab3" class="overflow-x-auto tab-content">
+        <table class="table overflow-hidden bg-white rounded-ss-none shadow-lg">
+          <!-- head -->
+          <thead>
+            <tr class="text-black text-md text-center">
+              <th>Fecha</th>
+              <th>Título</th>
+              <th>Cantidad archivos</th>
+              <th>Observación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Contenido tabla -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
   </main>
-  
+
   <!-- Indicador de rol -->
   <button class="bg-white btn btn-sm border-none text-mdaBlack absolute top-0 right-0 m-2.5 hover:bg-white">
     <i class="fa-solid fa-user"></i>Monitor
   </button>
 
   <!-- Enlace para manejo del DOM -->
-  <script src="../../scripts/post.js"></script>
+  <!-- <script src="../../scripts/tableroControl.js"></script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabLinks = document.querySelectorAll('.tab-link');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      tabLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // Remove active class from all links and hide all contents
+          tabLinks.forEach(link => link.classList.remove('bg-white', 'text-mdaBlack'));
+          tabContents.forEach(content => content.classList.remove('active'));
+
+          // Add active class to the clicked link and show corresponding content
+          link.classList.add('bg-white', 'text-mdaBlack');
+          const targetId = link.getAttribute('href').substring(1);
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+
+      // Show the first tab by default
+      tabLinks[0].click();
+    });
+  </script>
 </body>
 
 </html>
