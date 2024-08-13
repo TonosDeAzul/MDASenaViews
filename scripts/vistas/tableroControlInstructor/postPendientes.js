@@ -1,6 +1,11 @@
+// Importar funciones de peticiones
 import posts from "../../peticiones/listar/traerPosts.js";
 import traerPerfiles from "../../peticiones/listar/traerPerfiles.js";
 import traerUsuarios from "../../peticiones/listar/traerUsuarios.js";
+import accionPost from "../../peticiones/editar/accionPost.js";
+
+// Importar funciones de herramientas
+import modal from "../../herramientas/modal.js";
 
 export default function postPendientes(idInstructor) {
   const _tbody = document.getElementById("pendientes");
@@ -49,6 +54,60 @@ export default function postPendientes(idInstructor) {
             const _cantidadArchivos = document.createElement("td");
             _cantidadArchivos.textContent = element.material;
             _tr.appendChild(_cantidadArchivos);
+
+            const _acciones = document.createElement("td");
+            _tr.appendChild(_acciones);
+
+            const _aceptar = document.createElement("button");
+            _acciones.appendChild(_aceptar);
+
+            const _aceptarIcon = document.createElement("i");
+            _aceptarIcon.classList.add(
+              "fa-solid", 
+              "fa-square-check", 
+              "text-mdaGreen", 
+              "text-lg",
+              "leading-none",
+              "mr-2"
+            );
+            _aceptar.appendChild(_aceptarIcon);
+            _aceptar.addEventListener("click", 
+              () => modal()
+                .then((confirmado) => {
+                  if(confirmado) {
+                    element.estado = true;
+                    element.validacion = true;
+                    accionPost(element.id, element)
+                  } else {
+                    console.log("Se canceló la acción");
+                  }
+                })
+              );
+            
+            const _rechazar = document.createElement("button");
+            _acciones.appendChild(_rechazar);
+
+            const _rechazarIcon = document.createElement("i");
+            _rechazarIcon.classList.add(
+              "fa-solid", 
+              "fa-square-xmark", 
+              "text-mdaRed", 
+              "text-lg",
+              "leading-none"
+            );
+            _rechazar.appendChild(_rechazarIcon);
+            _rechazar.addEventListener("click", 
+              () => modal()
+                .then((confirmado) => {
+                  if(confirmado) {
+                    element.estado = false;
+                    element.validacion = true;
+                    accionPost(element.id, element)
+                  } else {
+                    console.log("Se canceló la acción");
+                  }
+                })
+              );
 
             _tbody.appendChild(_tr);
           }

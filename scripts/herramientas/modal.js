@@ -31,7 +31,7 @@ export default function modalActualizar() {
       "flex-col",
       "items-center"
     );
-    _modal.textContent = "¿Seguro que desea actualizar los datos?";
+    _modal.textContent = "¿Esta seguro?";
     _section.appendChild(_modal);
 
     const _br = document.createElement("br");

@@ -1,6 +1,6 @@
-import pendientes from "./tableroControlInstructor/postPendientes.js";
-import aceptados from "./tableroControlInstructor/postAceptados.js";
-import rechazados from "./tableroControlInstructor/postRechazados.js";
+import pendientes from "./tableroControlMonitor/postPendientes.js";
+import aceptados from "./tableroControlMonitor/postAceptados.js";
+import rechazados from "./tableroControlMonitor/postRechazados.js";
 
 let usuario; // Variable para almacenar el usuario actual
 

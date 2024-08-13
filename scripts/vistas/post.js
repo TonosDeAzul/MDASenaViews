@@ -95,7 +95,7 @@ Promise.all([getPosts(), getPerfiles()])
       // Documento
       const _a = _d.createElement("a");
       _a.href = "#";
-      _a.textContent = "Nombre del documento.docx ";
+      _a.textContent = post.material;
       _a.classList.add("text-base", "hover:underline");
       const _i = _d.createElement("i");
       _i.classList.add("fa-solid", "fa-arrow-down");
