@@ -77,7 +77,8 @@ export default function postPendientes(idInstructor) {
                   if(confirmado) {
                     element.estado = true;
                     element.validacion = true;
-                    accionPost(element.id, element)
+                    accionPost(element.id, element);
+                    location.reload();
                   } else {
                     console.log("Se canceló la acción");
                   }
@@ -103,6 +104,7 @@ export default function postPendientes(idInstructor) {
                     element.estado = false;
                     element.validacion = true;
                     accionPost(element.id, element)
+                    location.reload();
                   } else {
                     console.log("Se canceló la acción");
                   }

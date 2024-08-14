@@ -22,9 +22,6 @@ const _form = _d.querySelector("#formPost");
 // Funcion para validar el formulario antes de enviarlo
 const validarForm = (event) => {
 
-  // Prevenir el envio por defecto del formulario
-  event.preventDefault();
-
   // Validar que los campos no esten vacios
   const inputTitle = campoVacio(_inputTitle);
   const inputMaterial = campoVacio(_inputMaterial);
