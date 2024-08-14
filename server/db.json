@@ -14,7 +14,7 @@
       "contrasena": "123123123123",
       "idInstructorAsign": null,
       "idRolFK": "1",
-      "estado": false
+      "estado": true
     },
     {
       "id": "c702",
@@ -46,7 +46,7 @@
       "contrasena": "123123123123",
       "idInstructorAsign": null,
       "idRolFK": "2",
-      "estado": false
+      "estado": true
     },
     {
       "id": "4c14",
@@ -57,11 +57,12 @@
       "estado": true
     },
     {
-      "id": "e043",
-      "correoInstitucional": "fhudh@soy.sena.edu.co",
-      "contrasena": "1234567890",
+      "id": "23af",
+      "correoInstitucional": "zayas@soy.sena.edu.co",
+      "contrasena": "daniel109",
       "idInstructorAsign": null,
-      "idRolFK": "2"
+      "idRolFK": "2",
+      "estado": true
     }
   ],
   "tb_perfil": [
@@ -83,7 +84,7 @@
     },
     {
       "id": "e92d",
-      "nombre": "Yesid Pabon",
+      "nombre": "Yesid",
       "apellidos": "Almeida",
       "documento": "1096065666",
       "centroFormacion": "CIMI",
@@ -120,6 +121,14 @@
       "documento": "1099737501",
       "centroFormacion": "Cimi",
       "idUsuarioFk": "4c14"
+    },
+    {
+      "id": "5fa2",
+      "nombre": "Fernando",
+      "apellidos": "Zayas",
+      "documento": "1091230123",
+      "centroFormacion": "Centro Industrial de Mantenimiento Integral",
+      "idUsuarioFk": "23af"
     }
   ],
   "tb_rol": [
@@ -175,8 +184,8 @@
       "id": "00d8",
       "tituloPost": "Post 4",
       "fechaPost": "13/8/2024",
-      "estado": true,
-      "validacion": true,
+      "estado": false,
+      "validacion": false,
       "observacion": null,
       "material": "archivo4.pdf",
       "idUsuarioFk": "c702"
@@ -202,14 +211,14 @@
       "idUsuarioFk": "85d4"
     },
     {
-      "id": "06c9",
-      "tituloPost": "fdsfsdfa",
-      "fechaPost": "14/8/2024",
+      "id": "071a",
+      "tituloPost": "Post prueba 47",
+      "fechaPost": "13/8/2024",
       "estado": false,
-      "validacion": false,
+      "validacion": true,
       "observacion": null,
-      "material": "sdfdsaf.pdf",
-      "idUsuarioFk": "4c14"
+      "material": "prueba 47.pdf",
+      "idUsuarioFk": "c702"
     }
   ],
   "tb_centro": [

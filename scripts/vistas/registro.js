@@ -105,6 +105,7 @@ const validarForm = (event) => {
           contrasena: _inputConfirmarContrasena.value,
           idInstructorAsign: null,
           idRolFK: idRolFk,
+          estado: true
         };
 
         // Guardar usuario en localStorage y resetear formulario
