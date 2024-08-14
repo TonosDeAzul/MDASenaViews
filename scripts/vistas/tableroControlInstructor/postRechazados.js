@@ -6,6 +6,7 @@ import eliminarPost from "../../peticiones/eliminar/eliminarPost.js";
 
 // Importar funciones de herramientas
 import modal from "../../herramientas/modal.js";
+import modalAfirmar from "../../herramientas/modalAfirmacion.js";
 
 export default function postPendientes(idInstructor) {
   const _tbody = document.getElementById("rechazados");
@@ -79,8 +80,11 @@ export default function postPendientes(idInstructor) {
               () => modal()
                 .then((confirmado) => {
                   if(confirmado) {
-                    eliminarPost(element.id)
-                    location.reload();
+                    setTimeout(() => {
+                      eliminarPost(element.id)
+                      location.reload();
+                    }, 1000)
+                    modalAfirmar("Se ha eliminado el post", "Eliminar post")
                   } else {
                     console.log("Se canceló la acción");
                   }

@@ -8,6 +8,7 @@ import valido from "../validaciones/complementos/valido.js";
 
 // Importar herramientas
 import generarCodigo from "../herramientas/generarCodigo.js";
+import modalAfirmar from "../herramientas/modalAfirmacion.js";
 
 // Referencia al documento
 const _d = document;
@@ -66,7 +67,10 @@ const validarForm = (event) => {
   }
 
   // Si el código es válido, autenticar y cambiar a la vista de creación de perfil
-  autenticarCodigo();
+  setTimeout(() => {
+    autenticarCodigo();
+  }, 1000)
+  modalAfirmar("Se a verificado el codigo de autenticacion", "Validacion de codigo")
 };
 
 // Agregar evento de escucha al formulario para validar el código en el submit

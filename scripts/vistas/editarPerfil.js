@@ -10,6 +10,7 @@ import camposVacios from "../validaciones/campos.js";
 import evitarCaracteres from "../validaciones/evitarCaracteres.js";
 import longitudMaxima from "../validaciones/longitudMaxima.js";
 import longitudMinima from "../validaciones/longitudMinima.js";
+import modalAfirmar from "../herramientas/modalAfirmacion.js";
 
 // Referencia al documento
 const _d = document;
@@ -90,7 +91,10 @@ _form.addEventListener("submit", (event) => {
               perfilUsuario.apellidos = _inputApellidos.value;
               perfilUsuario.documento = _inputDocumento.value;
               perfilUsuario.centroFormacion = _inputCentro.value;
-              editarPerfil(perfilUsuario.id, perfilUsuario);
+              setTimeout(() => {
+                editarPerfil(perfilUsuario.id, perfilUsuario);
+              }, 1000)
+              modalAfirmar("Se han modificado los datos del usuario", "Modificacion de datos")
             } else {
               console.log("Perfil no encontrado");
             }

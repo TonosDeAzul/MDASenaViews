@@ -11,6 +11,7 @@ import extensionCorreo from "../validaciones/extensionCorreo.js";
 import mensajeError from "../validaciones/complementos/mensajeError.js";
 import invalido from "../validaciones/complementos/invalido.js";
 import valido from "../validaciones/complementos/valido.js";
+import modalAfirmar from "../herramientas/modalAfirmacion.js";
 
 // Referencia al documento
 const _d = document;
@@ -109,10 +110,13 @@ const validarForm = (event) => {
         // Guardar usuario en localStorage y resetear formulario
         localStorage.setItem("usuario", JSON.stringify(usuario));
         _form.reset();
-        // Redireccionar a la página de autenticación
-        window.location.href = "autenticacion.html";
         // Crear usuario en la base de datos
-        crearUsuario(usuario);
+        setTimeout(() => {
+          crearUsuario(usuario);
+          // Redireccionar a la página de autenticación
+          window.location.href = "autenticacion.html";
+        }, 1000)
+        modalAfirmar("Se a registrado un nuevo usuario", "Registro exitoso");
       });
     }
   });

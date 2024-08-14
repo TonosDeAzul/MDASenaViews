@@ -6,6 +6,7 @@ import accionPost from "../../peticiones/editar/accionPost.js";
 
 // Importar funciones de herramientas
 import modal from "../../herramientas/modal.js";
+import modalAfirmar from "../../herramientas/modalAfirmacion.js";
 
 export default function postPendientes(idInstructor) {
   const _tbody = document.getElementById("pendientes");
@@ -77,8 +78,11 @@ export default function postPendientes(idInstructor) {
                   if(confirmado) {
                     element.estado = true;
                     element.validacion = true;
-                    accionPost(element.id, element);
-                    location.reload();
+                    setTimeout(() => {
+                      accionPost(element.id, element);
+                      location.reload();
+                    }, 1000)
+                    modalAfirmar("Se a confirmado el post", "Confirmar post")
                   } else {
                     console.log("Se canceló la acción");
                   }

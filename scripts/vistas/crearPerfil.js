@@ -7,6 +7,7 @@ import camposVacios from "../validaciones/campos.js";
 import evitarCaracteres from "../validaciones/evitarCaracteres.js";
 import longitudMaxima from "../validaciones/longitudMaxima.js";
 import longitudMinima from "../validaciones/longitudMinima.js";
+import modalAfirmar from "../herramientas/modalAfirmacion.js";
 
 // Referencia al documento
 const _d = document;
@@ -83,12 +84,14 @@ const validarForm = (event) => {
       centroFormacion: _inputCentro.value,
       idUsuarioFk: idUsuarioFk,
     };
-
-    // Redireccionar a la página de login
-    window.location.href = "login.html";
-
-    // Crear perfil en la base de datos
-    crearPerfil(perfil);
+    
+    setTimeout(() => {
+      // Crear perfil en la base de datos
+      crearPerfil(perfil);
+      // Redireccionar a la página de login
+      window.location.href = "login.html";
+    }, 1000)
+    modalAfirmar("Se ha creado el perfil al usuario asociado", "Perfil creado exitosamente");
   });
 };
 

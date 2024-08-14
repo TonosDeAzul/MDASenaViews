@@ -6,6 +6,7 @@ import estadoUsuario from "../../peticiones/editar/estadoUsuario.js";
 
 // Importar funciones de herramientas
 import modal from "../../herramientas/modal.js";
+import modalAfirmar from "../../herramientas/modalAfirmacion.js";
 
 export default function usuariosInactivos() {
   const _tbody = document.getElementById("inactivos");
@@ -72,7 +73,11 @@ export default function usuariosInactivos() {
                   if (confirmado) {
                     element.estado = true;
                     console.log(element.id, element);
-                    estadoUsuario(element.id, element);
+                    setTimeout(() => {
+                      estadoUsuario(element.id, element);
+                      location.reload();
+                    }, 1000)
+                    modalAfirmar("Se ha activado el usuario", "Habilitar usuario");
                   } else {
                     console.log("Se canceló la acción");
                   }

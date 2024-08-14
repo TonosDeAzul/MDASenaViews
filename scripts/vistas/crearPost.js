@@ -1,4 +1,5 @@
 // Importar funciones de peticiones
+import modalAfirmar from "../herramientas/modalAfirmacion.js";
 import crearPost from "../peticiones/crear/crearPost.js";
 import traerUsuarios from "../peticiones/listar/traerUsuarios.js";
 import campoVacio from "../validaciones/campos.js";
@@ -21,6 +22,8 @@ const _form = _d.querySelector("#formPost");
 
 // Funcion para validar el formulario antes de enviarlo
 const validarForm = (event) => {
+
+  event.preventDefault();
 
   // Validar que los campos no esten vacios
   const inputTitle = campoVacio(_inputTitle);
@@ -69,8 +72,12 @@ const validarForm = (event) => {
       idUsuarioFk: idUsuarioFk
     }
   
-    // Crear post en la base de datos
-    crearPost(post);
+    setTimeout(() => {
+      // Crear post en la base de datos
+      crearPost(post);
+      _form.reset();
+    }, 1000)
+    modalAfirmar("Se ha creado un nuevo post", "Post creado exitosamente");
   });
 }
 
