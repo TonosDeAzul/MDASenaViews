@@ -65,11 +65,16 @@
           autocomplete="off" />
       </label>
       <!-- Centro de formación -->
-      <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
+      <select id="centro" class="select select-bordered w-full bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
+        <option disabled selected class="text-white">Seleccione centro</option>
+      </select>
+
+      <!-- <label class="bg-white text-mdaBlack input input-bordered flex items-center gap-2 mt-4">
         <i class="fa-solid fa-hospital text-gray-400"></i>
         <input id="centro" type="text" class="grow text-mdaBlack" placeholder="Centro de formación"
           autocomplete="off" />
-      </label>
+      </label> -->
+
       <button class="btn bg-mdaGreen border-none text-white mt-4 hover:bg-mdaGreen">
         Crear perfil
       </button>

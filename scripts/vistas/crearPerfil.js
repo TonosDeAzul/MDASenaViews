@@ -1,5 +1,6 @@
 // Importar funciones de peticiones
 import traerUsuarios from "../peticiones/listar/traerUsuarios.js";
+import traerCentros from "../peticiones/listar/traerCentros.js";
 import crearPerfil from "../peticiones/crear/crearPerfil.js";
 
 // Importar funciones de validaciones
@@ -33,8 +34,16 @@ evitarCaracteres(_inputApellidos, "letras");
 longitudMaxima(_inputApellidos, 50);
 evitarCaracteres(_inputDocumento, "numeros");
 longitudMaxima(_inputDocumento, 10);
-evitarCaracteres(_inputCentro, "letras");
-longitudMaxima(_inputCentro, 100);
+
+// Cargar centros
+traerCentros()
+  .then(data => {
+    data.forEach(element => {
+      const _option = _d.createElement("option");
+      _option.textContent = element.nombreCentro;
+      _inputCentro.appendChild(_option);
+    });
+  })
 
 // Función para validar el formulario antes de enviarlo
 const validarForm = (event) => {
@@ -44,24 +53,20 @@ const validarForm = (event) => {
   const inputNombre = camposVacios(_inputNombre);
   const inputApellidos = camposVacios(_inputApellidos);
   const inputDocumento = camposVacios(_inputDocumento);
-  const inputCentro = camposVacios(_inputCentro);
 
   // Validar la longitud mínima de los campos
   const longitudNombre = longitudMinima(_inputNombre, 5);
   const longitudApellidos = longitudMinima(_inputApellidos, 5);
   const longitudDocumento = longitudMinima(_inputDocumento, 8);
-  const longitudCentro = longitudMinima(_inputCentro, 4);
 
   // Si alguna validación falla, salir de la función
   if (
     !inputNombre ||
     !inputApellidos ||
     !inputDocumento ||
-    !inputCentro ||
     !longitudNombre ||
     !longitudApellidos ||
-    !longitudDocumento ||
-    !longitudCentro
+    !longitudDocumento
   ) {
     return;
   }

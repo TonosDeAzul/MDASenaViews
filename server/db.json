@@ -55,6 +55,14 @@
       "idInstructorAsign": null,
       "idRolFK": "3",
       "estado": true
+    },
+    {
+      "id": "23af",
+      "correoInstitucional": "zayas@soy.sena.edu.co",
+      "contrasena": "daniel109",
+      "idInstructorAsign": null,
+      "idRolFK": "2",
+      "estado": true
     }
   ],
   "tb_perfil": [
@@ -113,6 +121,14 @@
       "documento": "1099737501",
       "centroFormacion": "Cimi",
       "idUsuarioFk": "4c14"
+    },
+    {
+      "id": "5fa2",
+      "nombre": "Fernando",
+      "apellidos": "Zayas",
+      "documento": "1091230123",
+      "centroFormacion": "Centro Industrial de Mantenimiento Integral",
+      "idUsuarioFk": "23af"
     }
   ],
   "tb_rol": [
