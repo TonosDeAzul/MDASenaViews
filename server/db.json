@@ -14,7 +14,7 @@
       "contrasena": "123123123123",
       "idInstructorAsign": null,
       "idRolFK": "1",
-      "estado": true
+      "estado": false
     },
     {
       "id": "c702",
@@ -46,7 +46,7 @@
       "contrasena": "123123123123",
       "idInstructorAsign": null,
       "idRolFK": "2",
-      "estado": true
+      "estado": false
     },
     {
       "id": "4c14",
@@ -55,6 +55,13 @@
       "idInstructorAsign": null,
       "idRolFK": "3",
       "estado": true
+    },
+    {
+      "id": "e043",
+      "correoInstitucional": "fhudh@soy.sena.edu.co",
+      "contrasena": "1234567890",
+      "idInstructorAsign": null,
+      "idRolFK": "2"
     }
   ],
   "tb_perfil": [
@@ -76,7 +83,7 @@
     },
     {
       "id": "e92d",
-      "nombre": "Yesid",
+      "nombre": "Yesid Pabon",
       "apellidos": "Almeida",
       "documento": "1096065666",
       "centroFormacion": "CIMI",
@@ -168,8 +175,8 @@
       "id": "00d8",
       "tituloPost": "Post 4",
       "fechaPost": "13/8/2024",
-      "estado": false,
-      "validacion": false,
+      "estado": true,
+      "validacion": true,
       "observacion": null,
       "material": "archivo4.pdf",
       "idUsuarioFk": "c702"
@@ -195,14 +202,14 @@
       "idUsuarioFk": "85d4"
     },
     {
-      "id": "071a",
-      "tituloPost": "Post prueba 47",
-      "fechaPost": "13/8/2024",
+      "id": "06c9",
+      "tituloPost": "fdsfsdfa",
+      "fechaPost": "14/8/2024",
       "estado": false,
-      "validacion": true,
+      "validacion": false,
       "observacion": null,
-      "material": "prueba 47.pdf",
-      "idUsuarioFk": "c702"
+      "material": "sdfdsaf.pdf",
+      "idUsuarioFk": "4c14"
     }
   ],
   "tb_centro": [

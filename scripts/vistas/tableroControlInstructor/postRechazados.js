@@ -80,6 +80,7 @@ export default function postPendientes(idInstructor) {
                 .then((confirmado) => {
                   if(confirmado) {
                     eliminarPost(element.id)
+                    location.reload();
                   } else {
                     console.log("Se canceló la acción");
                   }

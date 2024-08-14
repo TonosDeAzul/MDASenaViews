@@ -10,6 +10,8 @@ import { crearParrafoNombre, crearParrafoDocumento, crearParrafo } from "../herr
 import { crearArticle, crearArticleDos, crearArticleNormal, crearSection } from "../herramientas/crearElementos/contenedores.js"; 
 import { crearIcon, crearIconDos, crearInput, crearLabel, crearOkIcon } from "../herramientas/crearElementos/extras.js";
 import editarRol from "../peticiones/editar/editarRol.js";
+import modalActualizar from "../herramientas/modal.js";
+import modalAfirmar from "../herramientas/modalAfirmacion.js";
 
 // Documento
 const _d = document;
@@ -205,14 +207,13 @@ const mostrarConfirmacionAgregar = (aprendiz) => {
         if(aprendiz.idUsuarioFk === usuario.id){
           usuario.idRolFK = "3";
           usuario.idInstructorAsign = userInstructor.id;
-          actualizarRol(usuario.id, usuario)
+          setTimeout(() => {
+            actualizarRol(usuario.id, usuario)
+          }, 1000)
+          modalAfirmar(`Se agrego un nuevo monitor`, "Confirmacion");
         }
       });
     });
-    _body.removeChild(_section);
-  });
-
-  _buttonCerrar.addEventListener("click", () => {
     _body.removeChild(_section);
   });
 };
@@ -255,7 +256,10 @@ const mostrarConfirmacionQuitar = (nombreMonitor, aprendiz) => {
         if(aprendiz.idUsuarioFk === usuario.id){
           usuario.idRolFK = "2";
           usuario.idInstructorAsign = null;
-          actualizarRol(usuario.id, usuario);
+          setTimeout(() => {
+            actualizarRol(usuario.id, usuario);
+          }, 1000)
+          modalAfirmar("Se elimino el rol monitor", "Quitar rol");
         }
       });
     });

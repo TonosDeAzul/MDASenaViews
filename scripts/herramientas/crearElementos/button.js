@@ -3,7 +3,6 @@ const _d = document;
 export function crearButton(){
   const _buttonCerrar = _d.createElement("button");
   _buttonCerrar.classList.add("btn", "btn-sm", "btn-circle", "btn-ghost", "text-mdaBlack");
-  _buttonCerrar.textContent = "✕";
   _buttonCerrar.setAttribute("id", "cerrarConfirmacion");
   return _buttonCerrar;
 }
