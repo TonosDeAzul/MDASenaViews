@@ -4,12 +4,12 @@ import evitarCaracteres from "../validaciones/evitarCaracteres.js";
 // Documento
 const _d = document;
 const _body = _d.body;
-let usuario; // Variable para almacenar el usuario actual
+let userInstructor; // Variable para almacenar el usuario actual
 let aprendicesEncontrados = []; // Variable para almacenar los resultados de búsqueda
 
 // Al cargar la página, obtener el usuario de localStorage si existe
 _d.addEventListener("DOMContentLoaded", () => {
-  usuario = JSON.parse(localStorage.getItem("usuario"));
+  userInstructor = JSON.parse(localStorage.getItem("usuario"));
 });
 
 const _input = _d.querySelector("#buscador");
@@ -48,6 +48,7 @@ const actualizarRol = (idUsuario, data) => {
     .then((response) => response.json())
 }
 
+// Funcio para eliminar el rol monitor de dicho usuario
 const eliminarMonitor = (nombreMonitor, usuario) => {
   const _divHijo = _d.createElement("div");
   _divHijo.setAttribute("id", "monitor");
@@ -318,6 +319,7 @@ const mostrarConfirmacionAgregar = (aprendiz) => {
         if(aprendiz.idUsuarioFk === usuario.id){
           // console.log(usuario.idRolFK);
           usuario.idRolFK = "3";
+          usuario.idInstructorAsign = userInstructor.id;
           actualizarRol(usuario.id, usuario)
         }
       });

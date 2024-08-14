@@ -102,6 +102,7 @@ const validarForm = (event) => {
         const usuario = {
           correoInstitucional: _inputCorreo.value,
           contrasena: _inputConfirmarContrasena.value,
+          idInstructorAsign: null,
           idRolFK: idRolFk,
         };
 
