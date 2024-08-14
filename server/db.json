@@ -63,6 +63,14 @@
       "idInstructorAsign": null,
       "idRolFK": "2",
       "estado": true
+    },
+    {
+      "id": "45b4",
+      "correoInstitucional": "juan@soy.sena.edu.co",
+      "contrasena": "1234567890",
+      "idInstructorAsign": null,
+      "idRolFK": "2",
+      "estado": true
     }
   ],
   "tb_perfil": [
@@ -129,6 +137,14 @@
       "documento": "1091230123",
       "centroFormacion": "Centro Industrial de Mantenimiento Integral",
       "idUsuarioFk": "23af"
+    },
+    {
+      "id": "45a5",
+      "nombre": "Juan David",
+      "apellidos": "Muñoz",
+      "documento": "1212121121",
+      "centroFormacion": "Centro Agroturístico",
+      "idUsuarioFk": "45b4"
     }
   ],
   "tb_rol": [
