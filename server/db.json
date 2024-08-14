@@ -1,49 +1,71 @@
 {
   "tb_usuarios": [
     {
+      "id": "1",
+      "correoInstitucional": "admin@sena.edu.co",
+      "contrasena": "admin2024",
+      "idInstructorAsign": null,
+      "idRolFK": "4",
+      "estado": true
+    },
+    {
       "id": "d2d5",
       "correoInstitucional": "daniel@sena.edu.co",
       "contrasena": "123123123123",
       "idInstructorAsign": null,
-      "idRolFK": "1"
+      "idRolFK": "1",
+      "estado": true
     },
     {
       "id": "c702",
       "correoInstitucional": "yesid@soy.sena.edu.co",
       "contrasena": "12345678",
       "idInstructorAsign": "d2d5",
-      "idRolFK": "3"
+      "idRolFK": "3",
+      "estado": true
     },
     {
       "id": "85d4",
       "correoInstitucional": "maria@soy.sena.edu.co",
       "contrasena": "123456789",
       "idInstructorAsign": "b8be",
-      "idRolFK": "3"
+      "idRolFK": "3",
+      "estado": true
     },
     {
       "id": "b8be",
       "correoInstitucional": "wrq@sena.edu.co",
       "contrasena": "123456789",
       "idInstructorAsign": null,
-      "idRolFK": "1"
+      "idRolFK": "1",
+      "estado": true
     },
     {
       "id": "dc49",
       "correoInstitucional": "dan@soy.sena.edu.co",
       "contrasena": "123123123123",
       "idInstructorAsign": null,
-      "idRolFK": "2"
+      "idRolFK": "2",
+      "estado": true
     },
     {
       "id": "4c14",
       "correoInstitucional": "jfcarreo5@soy.sena.edu.co",
       "contrasena": "1234567890",
       "idInstructorAsign": null,
-      "idRolFK": "3"
+      "idRolFK": "3",
+      "estado": true
     }
   ],
   "tb_perfil": [
+    {
+      "id": "1",
+      "nombre": "Admin",
+      "apellidos": "MDA SENA",
+      "documento": "21061957",
+      "centroFormacion": "Colombia",
+      "idUsuarioFk": "1"
+    },
     {
       "id": "c459",
       "nombre": "Daniel",
@@ -105,6 +127,10 @@
     {
       "id": "3",
       "nombreRol": "Monitor"
+    },
+    {
+      "id": "4",
+      "nombreRol": "Administrador"
     }
   ],
   "tb_post": [
@@ -133,7 +159,7 @@
       "tituloPost": "Post 3",
       "fechaPost": "13/8/2024",
       "estado": false,
-      "validacion": true,
+      "validacion": false,
       "observacion": null,
       "material": "archivo3.pdf",
       "idUsuarioFk": "85d4"
@@ -143,7 +169,7 @@
       "tituloPost": "Post 4",
       "fechaPost": "13/8/2024",
       "estado": false,
-      "validacion": true,
+      "validacion": false,
       "observacion": null,
       "material": "archivo4.pdf",
       "idUsuarioFk": "c702"
@@ -163,7 +189,7 @@
       "tituloPost": "Hola",
       "fechaPost": "13/8/2024",
       "estado": false,
-      "validacion": false,
+      "validacion": true,
       "observacion": null,
       "material": "Archivo 20.pdf",
       "idUsuarioFk": "85d4"
@@ -172,11 +198,49 @@
       "id": "071a",
       "tituloPost": "Post prueba 47",
       "fechaPost": "13/8/2024",
-      "estado": true,
+      "estado": false,
       "validacion": true,
       "observacion": null,
       "material": "prueba 47.pdf",
       "idUsuarioFk": "c702"
+    }
+  ],
+  "tb_centro": [
+    {
+      "id": "1",
+      "nombreCentro": "Centro Industrial de Mantenimiento Integral"
+    },
+    {
+      "id": "2",
+      "nombreCentro": "Centro de Atención al Sector Agropecuario"
+    },
+    {
+      "id": "3",
+      "nombreCentro": "Centro Industrial del Diseño y la Manofactura"
+    },
+    {
+      "id": "4",
+      "nombreCentro": "Centro de Servicios Empresariales y Turísticos"
+    },
+    {
+      "id": "5",
+      "nombreCentro": "Centro Industrial y del Desarrollo Tecnológico"
+    },
+    {
+      "id": "6",
+      "nombreCentro": "Centro Agroturístico"
+    },
+    {
+      "id": "7",
+      "nombreCentro": "Centro Agroempresarial y Turístico de los Andes"
+    },
+    {
+      "id": "8",
+      "nombreCentro": "Centro de Gestión Agroempresarial del Oriente"
+    },
+    {
+      "id": "327c",
+      "nombreCentro": "Centro de Servicios de Salud"
     }
   ]
 }

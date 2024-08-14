@@ -61,7 +61,7 @@ const validarForm = (event) => {
     localStorage.setItem('usuario', JSON.stringify(usuarioValido));
 
     // Redirigir según el rol del usuario
-    if (usuarioValido) {
+    if (usuarioValido && usuarioValido.estado === true) {
       switch (usuarioValido.idRolFK) {
         case "1":
           window.location.href = "viewsInstructor/inicio.html";
@@ -69,8 +69,14 @@ const validarForm = (event) => {
         case "2":
           window.location.href = "viewsAprendiz/inicio.html";
           break;
-        default:
+        case "3":
           window.location.href = "viewsMonitor/inicio.html";
+          break;
+        case "4":
+          window.location.href = "viewsAdministrador/inicio.html";
+          break;
+        default:
+          window.location.href = "login.html";
       }
     } else {
       // Mostrar mensaje de error si el usuario no es encontrado

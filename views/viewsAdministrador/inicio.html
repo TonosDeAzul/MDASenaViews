@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Enlace para estilos personalizados -->
+  <link rel="stylesheet" href="../../styles/style.css" />
+  <!-- Enlace con la librería Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Enlace para personalización de colores en Tailwind -->
+  <script src="../../scripts/tailwind.js"></script>
+  <!-- Enlace con la libería DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <!-- Enlace para iconos de Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>MDA SENA - Inicio</title>
+</head>
+
+<body class="flex bg-mdaWhite bg-gradient-to-t from-mdaGreen_400 to-mdaWhite">
+
+  <!-- Barra lateral izquierda (Desktop) -->
+  <aside class="bg-white p-7 shadow-md sticky top-0 h-screen z-10 hidden md:block">
+    <section class="grid gap-y-5">
+      <!-- Logo Sena y nombre del proyecto -->
+      <div class="flex flex-row w-full h-32">
+        <!-- Logo -->
+        <div class="grid flex-grow place-items-center w-full">
+          <img src="../../images/LogoNegro.svg" alt="" />
+        </div>
+        <!-- HR -->
+        <div class="divider divider-horizontal"></div>
+        <!-- Nombre -->
+        <div class="grid flex-grow place-items-center w-full">
+          <h1 class="text-4xl text-mdaBlack leading-none">
+            <span class="text-3xl text-mdaGreen">MDA</span> <br />
+            Sena
+          </h1>
+        </div>
+      </div>
+      <!-- HR -->
+      <div class="flex flex-col w-full">
+        <div class="divider m-0 h-0"></div>
+      </div>
+      <!-- Input de búsqueda -->
+      <form action="">
+        <label class="input input-bordered flex items-center gap-2 bg-white">
+          <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+          <input type="text" class="grow text-mdaBlack" placeholder="Search" id="buscador"/>
+        </label>
+      </form>
+      <!-- HR -->
+      <div class="flex flex-col w-full">
+        <div class="divider m-0 h-0"></div>
+      </div>
+      <!-- Botones navegación -->
+      <div>
+        <a href="inicio.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-solid fa-house"></i>
+          Inicio
+        </a>
+        <a href="listarUsuarios.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-solid fa-users"></i>
+          Control usuarios
+        </a>
+        <a href="listarPosts.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-regular fa-paste"></i>
+          Control publicaciones
+        </a>
+        <a href="agregarCentro.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-solid fa-hospital"></i>
+          Agregar centro
+        </a>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Cabecera (Mobile) -->
+  <header class="bg-white px-7 py-2 shadow-md fixed top-0 w-full z-10 block md:hidden">
+    <nav class="grid gap-y-5">
+      <div class="flex place-items-center gap-5">
+        <!-- Nombre -->
+        <h1 class="text-base text-mdaBlack leading-none">
+            <span class="text-mdaGreen">MDA</span> <br />
+            SENA
+        </h1>
+        <!-- Input de búsqueda -->
+        <form action="" class="w-full">
+            <label class="input input-bordered flex items-center gap-2 bg-white">
+                <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                <input type="text" class="grow text-mdaBlack" placeholder="Buscar post" id="buscador2"/>
+            </label>
+        </form>
+        <button class="" id="abrirNavegacion">
+            <i class="fa-solid fa-bars text-mdaBlack"></i>
+        </button>
+      </div>
+      <!-- Botones navegación -->
+      <div class="hidden" id="modalNavegacion">
+        <a href="inicio.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-solid fa-house"></i>
+          Inicio
+        </a>
+        <a href="listarUsuarios.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-solid fa-users"></i>
+          Control usuarios
+        </a>
+        <a href="listarPosts.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-regular fa-paste"></i>
+          Control publicaciones
+        </a>
+        <a href="agregarCentro.html"
+          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+          <i class="fa-solid fa-hospital"></i>
+          Agregar centro
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenedor para los artículos -->
+  <main id="postContainer"
+    class="m-auto flex w-full max-w-screen-2xl min-h-screen justify-center p-5 gap-5 flex-wrap content-start">
+    <!-- Artículo -->
+  </main>
+  
+  <!-- Indicador de rol -->
+  <button class="bg-white btn btn-sm border-none text-mdaBlack absolute top-0 right-0 m-2.5 hover:bg-white">
+    <i class="fa-solid fa-user"></i>Administrador
+  </button>
+
+  <!-- Enlace para manejo del DOM -->
+  <script src="../../scripts/vistas/post.js"></script>
+  <script src="../../scripts/herramientas/header.js"></script>
+</body>
+
+</html>
