@@ -22,64 +22,66 @@
 <body class="flex bg-mdaWhite bg-gradient-to-t from-mdaGreen_400 to-mdaWhite">
 
   <!-- Barra lateral izquierda (Desktop) -->
-  <aside class="bg-white p-7 shadow-md sticky top-0 h-screen z-10 hidden md:block">
-    <section class="grid gap-y-5">
-      <!-- Logo Sena y nombre del proyecto -->
-      <div class="flex flex-row w-full h-32">
-        <!-- Logo -->
-        <div class="grid flex-grow place-items-center w-full">
-          <img src="../../images/LogoNegro.svg" alt="" />
+  <aside class="bg-white p-7 shadow-md sticky top-0 h-screen z-10 hidden relative md:block">
+    <section class="flex flex-col justify-between h-full">
+      <article class="grid gap-y-5">
+        <!-- Logo Sena y nombre del proyecto -->
+        <div class="flex flex-row w-full h-32">
+          <!-- Logo -->
+          <div class="grid flex-grow place-items-center w-full">
+            <img src="../../images/LogoNegro.svg" alt="" />
+          </div>
+          <!-- HR -->
+          <div class="divider divider-horizontal"></div>
+          <!-- Nombre -->
+          <div class="grid flex-grow place-items-center w-full">
+            <h1 class="text-4xl text-mdaBlack leading-none">
+              <span class="text-3xl text-mdaGreen">MDA</span> <br />
+              Sena
+            </h1>
+          </div>
         </div>
         <!-- HR -->
-        <div class="divider divider-horizontal"></div>
-        <!-- Nombre -->
-        <div class="grid flex-grow place-items-center w-full">
-          <h1 class="text-4xl text-mdaBlack leading-none">
-            <span class="text-3xl text-mdaGreen">MDA</span> <br />
-            Sena
-          </h1>
+        <div class="flex flex-col w-full">
+          <div class="divider m-0 h-0"></div>
         </div>
-      </div>
-      <!-- HR -->
-      <div class="flex flex-col w-full">
-        <div class="divider m-0 h-0"></div>
-      </div>
-      <!-- Input de búsqueda -->
-      <form action="">
-        <label class="input input-bordered flex items-center gap-2 bg-white">
-          <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
-          <input type="text" class="grow text-mdaBlack" placeholder="Search" id="buscador"/>
-        </label>
-      </form>
-      <!-- HR -->
-      <div class="flex flex-col w-full">
-        <div class="divider m-0 h-0"></div>
-      </div>
-      <!-- Botones navegación -->
-      <div>
-        <a href="inicio.html"
-          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-          <i class="fa-solid fa-house"></i>
-          Inicio
-        </a>
-        <a href="listarUsuarios.html"
-          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-          <i class="fa-solid fa-users"></i>
-          Control usuarios
-        </a>
-        <a href="listarPosts.html"
-          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-          <i class="fa-regular fa-paste"></i>
-          Control publicaciones
-        </a>
-        <a href="agregarCentro.html"
-          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-          <i class="fa-solid fa-hospital"></i>
-          Agregar centro
-        </a>
-      </div>
+        <!-- Input de búsqueda -->
+        <form action="">
+          <label class="input input-bordered flex items-center gap-2 bg-white">
+            <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+            <input type="text" class="grow text-mdaBlack" placeholder="Search" id="buscador" />
+          </label>
+        </form>
+        <!-- HR -->
+        <div class="flex flex-col w-full">
+          <div class="divider m-0 h-0"></div>
+        </div>
+        <!-- Botones navegación -->
+        <div>
+          <a href="inicio.html"
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+            <i class="fa-solid fa-house"></i>
+            Inicio
+          </a>
+          <a href="listarUsuarios.html"
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+            <i class="fa-solid fa-users"></i>
+            Control usuarios
+          </a>
+          <a href="listarPosts.html"
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+            <i class="fa-regular fa-paste"></i>
+            Control publicaciones
+          </a>
+          <a href="agregarCentro.html"
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+            <i class="fa-solid fa-hospital"></i>
+            Agregar centro
+          </a>
+        </div>
+      </article>
       <a href="../login.html"
-        class="grid w-full btn bg-transparent border border-mdaRed text-mdaRed mt-2 hover:bg-mdaRed hover:text-mdaWhite hover:border-mdaRed">
+        class="grid w-full btn bg-transparent border border-mdaRed text-mdaRed hover:bg-mdaRed hover:text-mdaWhite hover:border-mdaRed">
         Cerrar sesión
       </a>
     </section>
@@ -91,18 +93,18 @@
       <div class="flex place-items-center gap-5">
         <!-- Nombre -->
         <h1 class="text-base text-mdaBlack leading-none">
-            <span class="text-mdaGreen">MDA</span> <br />
-            SENA
+          <span class="text-mdaGreen">MDA</span> <br />
+          SENA
         </h1>
         <!-- Input de búsqueda -->
         <form action="" class="w-full">
-            <label class="input input-bordered flex items-center gap-2 bg-white">
-                <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
-                <input type="text" class="grow text-mdaBlack" placeholder="Buscar post" id="buscador2"/>
-            </label>
+          <label class="input input-bordered flex items-center gap-2 bg-white">
+            <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+            <input type="text" class="grow text-mdaBlack" placeholder="Buscar post" id="buscador2" />
+          </label>
         </form>
         <button class="" id="abrirNavegacion">
-            <i class="fa-solid fa-bars text-mdaBlack"></i>
+          <i class="fa-solid fa-bars text-mdaBlack"></i>
         </button>
       </div>
       <!-- Botones navegación -->
@@ -143,7 +145,8 @@
       <form id="formCentro">
         <label class="input input-bordered flex items-center gap-2 bg-white mb-4">
           <i class="fa-solid fa-heading"></i>
-          <input type="text" class="grow text-mdaBlack" placeholder="Nombre del centro de formación" id="nombreCentro"/>
+          <input type="text" class="grow text-mdaBlack" placeholder="Nombre del centro de formación"
+            id="nombreCentro" />
         </label>
         <button type="submit" class="btn w-full bg-mdaGreen border-none text-white hover:bg-mdaGreen">
           Cargar centro
@@ -151,7 +154,7 @@
       </form>
     </section>
   </main>
-  
+
   <!-- Indicador de rol -->
   <button class="bg-white btn btn-sm border-none text-mdaBlack absolute top-0 right-0 m-2.5 hover:bg-white">
     <i class="fa-solid fa-user"></i>Administrador

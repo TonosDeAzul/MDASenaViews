@@ -23,61 +23,67 @@
 
   <!-- Barra lateral izquierda (Desktop) -->
   <aside class="bg-white p-7 shadow-md sticky top-0 h-screen z-10 hidden md:block">
-    <section class="grid gap-y-5">
-      <!-- Logo Sena y nombre del proyecto -->
-      <div class="flex flex-row w-full h-32">
-        <!-- Logo -->
-        <div class="grid flex-grow place-items-center w-full">
-          <img src="../../images/LogoNegro.svg" alt="" />
+    <section class="flex flex-col justify-between h-full">
+      <article class="grid gap-y-5">
+        <!-- Logo Sena y nombre del proyecto -->
+        <div class="flex flex-row w-full h-32">
+          <!-- Logo -->
+          <div class="grid flex-grow place-items-center w-full">
+            <img src="../../images/LogoNegro.svg" alt="" />
+          </div>
+          <!-- HR -->
+          <div class="divider divider-horizontal"></div>
+          <!-- Nombre -->
+          <div class="grid flex-grow place-items-center w-full">
+            <h1 class="text-4xl text-mdaBlack leading-none">
+              <span class="text-3xl text-mdaGreen">MDA</span> <br />
+              Sena
+            </h1>
+          </div>
         </div>
         <!-- HR -->
-        <div class="divider divider-horizontal"></div>
-        <!-- Nombre -->
-        <div class="grid flex-grow place-items-center w-full">
-          <h1 class="text-4xl text-mdaBlack leading-none">
-            <span class="text-3xl text-mdaGreen">MDA</span> <br />
-            Sena
-          </h1>
+        <div class="flex flex-col w-full">
+          <div class="divider m-0 h-0"></div>
         </div>
-      </div>
-      <!-- HR -->
-      <div class="flex flex-col w-full">
-        <div class="divider m-0 h-0"></div>
-      </div>
-      <!-- Input de búsqueda -->
-      <form action="">
-        <label class="input input-bordered flex items-center gap-2 bg-white">
-          <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
-          <input type="text" class="grow text-mdaBlack" placeholder="Search" id="buscador"/>
-        </label>
-      </form>
-      <!-- HR -->
-      <div class="flex flex-col w-full">
-        <div class="divider m-0 h-0"></div>
-      </div>
-      <!-- Botones navegación -->
-      <div>
-        <a href="inicio.html"
-          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-          <i class="fa-solid fa-house"></i>
-          Inicio
-        </a>
-        <a href="crearPost.html"
-          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-          <i class="fa-solid fa-plus-minus"></i>
-          Crear post
-        </a>
-        <a href="tableroControl.html"
-          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-          <i class="fa-solid fa-bell"></i>
-          Tablero de control
-        </a>
-        <a href="editarPerfilMonitor.html"
-          class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
-          <i class="fa-regular fa-address-card"></i>
-          Perfil
-        </a>
-      </div>
+        <!-- Input de búsqueda -->
+        <form action="">
+          <label class="input input-bordered flex items-center gap-2 bg-white">
+            <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+            <input type="text" class="grow text-mdaBlack" placeholder="Search" id="buscador" />
+          </label>
+        </form>
+        <!-- HR -->
+        <div class="flex flex-col w-full">
+          <div class="divider m-0 h-0"></div>
+        </div>
+        <!-- Botones navegación -->
+        <div>
+          <a href="inicio.html"
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+            <i class="fa-solid fa-house"></i>
+            Inicio
+          </a>
+          <a href="crearPost.html"
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+            <i class="fa-solid fa-plus-minus"></i>
+            Crear post
+          </a>
+          <a href="tableroControl.html"
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+            <i class="fa-solid fa-bell"></i>
+            Tablero de control
+          </a>
+          <a href="editarPerfilMonitor.html"
+            class="btn bg-transparent shadow-none w-full border-none text-mdaBlack hover:bg-mdaGreen_400 flex justify-start">
+            <i class="fa-regular fa-address-card"></i>
+            Perfil
+          </a>
+        </div>
+      </article>
+      <a href="../login.html"
+        class="grid w-full btn bg-transparent border border-mdaRed text-mdaRed mt-2 hover:bg-mdaRed hover:text-mdaWhite hover:border-mdaRed">
+        Cerrar sesión
+      </a>
     </section>
   </aside>
 
