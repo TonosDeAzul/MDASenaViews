@@ -11,6 +11,7 @@ _d.addEventListener("DOMContentLoaded", () => {
 
 // Atrapar el input del buscador
 const _input = _d.querySelector("#buscador");
+const _inputDos = _d.querySelector("#buscador2");
 
 
 // Contenedor de los posts
@@ -118,17 +119,33 @@ Promise.all([getPosts(), getPerfiles()])
     _input.addEventListener("input", () => {
       const _valor = _input.value.toLowerCase();
       _articulos.forEach((_post) => {
-        const _titlePost = _post.textContent.toLowerCase();
-        if (_titlePost.includes(_valor)) {
-          _post.classList.remove("hidden");
-          _post.classList.add("block");
+          const _titlePost = _post.textContent.toLowerCase();
+          if (_titlePost.includes(_valor)) {
+            _post.classList.remove("hidden");
+            _post.classList.add("block");
+          }
+          else {
+            _post.classList.remove("block");
+            _post.classList.add("hidden");
+          }
         }
-        else {
-          _post.classList.remove("block");
-          _post.classList.add("hidden");
+      )
+    })
+
+    _inputDos.addEventListener("input", () => {
+      const _valor = _inputDos.value.toLowerCase();
+      _articulos.forEach((_post) => {
+          const _titlePost = _post.textContent.toLowerCase();
+          if (_titlePost.includes(_valor)) {
+            _post.classList.remove("hidden");
+            _post.classList.add("block");
+          }
+          else {
+            _post.classList.remove("block");
+            _post.classList.add("hidden");
+          }
         }
-      }
-    )
+      )
     })
   });
 

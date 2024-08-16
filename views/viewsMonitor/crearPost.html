@@ -49,7 +49,7 @@
         <form action="">
           <label class="input input-bordered flex items-center gap-2 bg-white">
             <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
-            <input type="text" class="grow text-mdaBlack" placeholder="Search" id="buscador" />
+            <input type="text" class="grow text-mdaBlack" placeholder="Buscar post" id="buscador" />
           </label>
         </form>
         <!-- HR -->
@@ -129,6 +129,10 @@
           <i class="fa-regular fa-address-card"></i>
           Perfil
         </a>
+        <a href="../login.html"
+          class="grid w-full btn bg-transparent border border-mdaRed text-mdaRed mt-2 hover:bg-mdaRed hover:text-mdaWhite hover:border-mdaRed">
+          Cerrar sesión
+        </a>
       </div>
     </nav>
   </header>
@@ -166,6 +170,7 @@
   <!-- Enlace para manejo del DOM -->
   <script src="../../scripts/vistas/crearPost.js" type="module"></script>
   <script src="../../scripts/herramientas/header.js"></script>
+  <script src="../../scripts/herramientas/redireccionMonitor.js"></script>
 </body>
 
 </html>
